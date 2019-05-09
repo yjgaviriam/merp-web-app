@@ -14,7 +14,7 @@ export class AppConstants {
     public static readonly APP_NAME = 'MERP App';
 
     /**
-     * Contiene la direccion del api para el ambiente
+     * Contiene la direccion del api para el ambiente en ejecución
      */
     public static readonly API_URL = environment.apiUrl;
 
