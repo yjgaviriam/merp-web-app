@@ -14,6 +14,11 @@ export class AppConstants {
     public static readonly APP_NAME = 'MERP App';
 
     /**
+     * Nombre de la aplicacion abreviada
+     */
+    public static readonly APP_NAME_SHORT = 'MA';
+
+    /**
      * Contiene la direccion del api para el ambiente en ejecución
      */
     public static readonly API_URL = environment.apiUrl;
@@ -79,6 +84,6 @@ export class AppConstants {
     /**
      * Nombre del usuario administrador
      */
-    public static readonly USER_ADMIN = 'Francisco';
+    public static readonly USER_ADMIN = 'MERP Admin';
 }
 

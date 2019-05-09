@@ -20,6 +20,11 @@ export class HeaderComponent {
   public readonly APP_NAME = AppConstants.APP_NAME;
 
   /**
+   * Nombre de la aplicacion abreviada
+   */
+  public readonly APP_NAME_SHORT = AppConstants.APP_NAME_SHORT;
+
+  /**
    * Constructor de la clase
    */
   constructor() { }
