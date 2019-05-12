@@ -64,6 +64,10 @@ export class AppConstants {
          */
         ERROR: {
             /**
+             * Se usa en la home si no se puede cargar los puestos
+             */
+            CANT_LOAD_SUBSTATIONS: 'No hemos podido cargar la información de las subestaciones. Intenta recargar la página.',
+            /**
              * Se usa cuando hay un error en una peticion y no esta controlado por el servidor
              */
             HTTP_GENERAL_MESSAGE: 'Se ha presentado un inconveniente en el proceso.'

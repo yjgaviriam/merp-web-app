@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SubstationsComponent } from './components/substations/substations.component';
 
 /**
  * Rutas del modulo principal
  */
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'substations', component: SubstationsComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

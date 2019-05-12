@@ -3,5 +3,7 @@
         "REGISTERED": "Registered Substations",
         "NAME": "Name",
         "CODE": "Code"
-    }
+    },
+    "DELETE": "Delete",
+    "EDIT": "Edit"
 }

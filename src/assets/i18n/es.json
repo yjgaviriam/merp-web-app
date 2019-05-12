@@ -3,5 +3,8 @@
         "REGISTERED": "Subestaciones Registradas",
         "NAME": "Nombre",
         "CODE": "Código"
-    }
+    },
+    "DELETE": "Borrar",
+    "EDIT": "Editar"
+
 }
