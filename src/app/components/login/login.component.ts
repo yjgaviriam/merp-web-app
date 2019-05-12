@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
    */
   public clientHeight: string;
 
-  public email: string;
+  public username: string;
 
   public password: string;
 
@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
   }
 
   public login() {
-    this.userService.login(this.email, this.password).subscribe((response: any) => {
-      this.userService.setStatusLogged(this.email, this.password);
+    this.userService.login(this.username, this.password).subscribe((response: any) => {
+      this.userService.setStatusLogged(this.username, this.password);
+      this.router.navigate(['/']);
     }, (error: HttpErrorResponse) => {
-      
     });
   }
 

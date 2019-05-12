@@ -25,20 +25,20 @@ export class UserService {
    */
   constructor(private httpClient: HttpClient) { }
 
-  public login(userName: string, password: string) {
+  public login(username: string, password: string) {
     const httpParams = new FormData();
-    httpParams.append('userName', userName);
+    httpParams.append('username', username);
     httpParams.append('password', password);
 
     return this.httpClient.post(this.URL_API + 'v1/login', httpParams);
   }
 
-  public setStatusLogged(email: string, password: string) {
-    localStorage.setItem('userLogged', JSON.stringify({ email, password }));
+  public setStatusLogged(username: string, password: string) {
+    localStorage.setItem('userLogged', JSON.stringify({ username, password }));
   }
 
   public getStatusLogged() {
-    return JSON.parse(localStorage.getItem('userLogged')) !== null ? JSON.parse(localStorage.getItem('userLogged')).email : null;
+    return JSON.parse(localStorage.getItem('userLogged')) !== null ? JSON.parse(localStorage.getItem('userLogged')).username : null;
   }
 
   public deleteStatusLogged() {
