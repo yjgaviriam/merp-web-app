@@ -37,11 +37,11 @@ export class UserService {
     localStorage.setItem('userLogged', JSON.stringify({ username, password }));
   }
 
-  public getStatusLogged() {
+  public getStatusLogged(): void {
     return JSON.parse(localStorage.getItem('userLogged')) !== null ? JSON.parse(localStorage.getItem('userLogged')).username : null;
   }
 
-  public deleteStatusLogged() {
+  public deleteStatusLogged(): void {
     localStorage.removeItem('userLogged');
   }
 }

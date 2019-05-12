@@ -21,16 +21,19 @@ export class LoginComponent implements OnInit {
 
   constructor(private userService: UserService, private router: Router) { }
 
-  ngOnInit() {
+  /**
+   * @see {@link https://angular.io/guide/lifecycle-hooks#oninit}
+   */
+  ngOnInit(): void {
     this.clientHeight = window.innerHeight + 'px';
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize() {
+  onResize(): void {
     this.clientHeight = window.innerHeight + 'px';
   }
 
-  public login() {
+  public login(): void {
     this.userService.login(this.username, this.password).subscribe((response: any) => {
       this.userService.setStatusLogged(this.username, this.password);
       this.router.navigate(['/']);
