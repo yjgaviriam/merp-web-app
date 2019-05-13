@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './servicies/user.service';
 
 /**
  * Componente principal de la aplicacion
@@ -12,10 +13,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  /**
+   * Guarda la info del usuario
+   */
+  public user: any;
+
   /**
    * Constructor de la clase
+   * 
+   * @param userService Servicio para trabajar con los usuarios
    */
-  constructor() { 
-    
+  constructor(private userService: UserService) {
+    this.user = this.userService.getStatusLogged();
   }
 }

@@ -33,12 +33,12 @@ export class UserService {
     return this.httpClient.post(this.URL_API + 'v1/login', httpParams);
   }
 
-  public setStatusLogged(username: string, password: string) {
-    localStorage.setItem('userLogged', JSON.stringify({ username, password }));
+  public setStatusLogged(username: string, token: string): void {
+    localStorage.setItem('userLogged', JSON.stringify({ username, token }));
   }
 
-  public getStatusLogged(): void {
-    return JSON.parse(localStorage.getItem('userLogged')) !== null ? JSON.parse(localStorage.getItem('userLogged')).username : null;
+  public getStatusLogged(): string {
+    return JSON.parse(localStorage.getItem('userLogged'));
   }
 
   public deleteStatusLogged(): void {

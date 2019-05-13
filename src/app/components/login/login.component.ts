@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
 
   public login(): void {
     this.userService.login(this.username, this.password).subscribe((response: any) => {
-      this.userService.setStatusLogged(this.username, this.password);
-      this.router.navigate(['/']);
+      this.userService.setStatusLogged(this.username, response.data.token);
+      location.reload();
     }, (error: HttpErrorResponse) => {
     });
   }
