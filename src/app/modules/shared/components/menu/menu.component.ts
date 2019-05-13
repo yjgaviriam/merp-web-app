@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppConstants } from 'src/app/app-constants';
+import { UserService } from 'src/app/servicies/user.service';
 
 /**
  * Componente que contiene el menu lateral de la aplicacion
@@ -15,12 +16,21 @@ import { AppConstants } from 'src/app/app-constants';
 export class MenuComponent {
 
   /**
+   * Guarda la info del usuario
+   */
+  public user: any;
+
+  /**
    * Nombre del usuario administrador
    */
   public readonly USER_ADMIN = AppConstants.USER_ADMIN;
 
   /**
    * Constructor de la clase
+   *
+   * @param userService Servicio para trabajar con los usuarios
    */
-  constructor() { }
+  constructor(private userService: UserService) {
+    this.user = this.userService.getStatusLogged();
+  }
 }

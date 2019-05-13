@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AppConstants } from '../app-constants';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { User } from '../entities/user';
 
 /**
  * Servicio para trabajar con los usuarios
@@ -25,6 +27,19 @@ export class UserService {
    */
   constructor(private httpClient: HttpClient) { }
 
+  /**
+   * Permite obtener todas los usuarios
+   *
+   * @return Un `Observable` con la respuesta del servidor
+   */
+  public getAllUsers(): Observable<{ data: any[] }> {
+    return this.httpClient.get<{ data: any[] }>(this.URL_API + 'v1/users/');
+  }
+
+  public getStatusLogged(): string {
+    return JSON.parse(localStorage.getItem('userLogged'));
+  }
+
   public login(username: string, password: string) {
     const httpParams = new FormData();
     httpParams.append('username', username);
@@ -33,15 +48,23 @@ export class UserService {
     return this.httpClient.post(this.URL_API + 'v1/login', httpParams);
   }
 
-  public setStatusLogged(username: string, token: string): void {
-    localStorage.setItem('userLogged', JSON.stringify({ username, token }));
+  public registerUser(user: User): Observable<any> {
+    const httpParams = new FormData();
+    httpParams.append('email', user.email);
+    httpParams.append('lastName', user.lastName);
+    httpParams.append('name', user.name);
+    httpParams.append('nickname', user.nickname);
+    httpParams.append('roleId', String(user.role.id));
+    httpParams.append('enterpriseId', String(user.enterprise.id));
+
+    return this.httpClient.post(this.URL_API + 'v1/users/create', httpParams);
   }
 
-  public getStatusLogged(): string {
-    return JSON.parse(localStorage.getItem('userLogged'));
-  }
-
-  public deleteStatusLogged(): void {
+  public removeStatusLogged(): void {
     localStorage.removeItem('userLogged');
+  }
+
+  public setStatusLogged(username: string, token: string, fullName: string): void {
+    localStorage.setItem('userLogged', JSON.stringify({ username, token, fullName }));
   }
 }

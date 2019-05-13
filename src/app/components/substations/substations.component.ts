@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SubstationService } from 'src/app/servicies/substation.service';
-import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { AppConstants } from 'src/app/app-constants';
 import { MatDialog } from '@angular/material';

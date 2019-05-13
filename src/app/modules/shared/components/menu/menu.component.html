@@ -10,7 +10,7 @@
         <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>{{USER_ADMIN}}</p>
+        <p>{{ user.fullName }}</p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
@@ -25,6 +25,9 @@
       </li>
       <li>
         <a [routerLink]="['/substations']"><i class="fa fa-gear"></i> <span>Subestaciones</span></a>
+      </li>
+      <li>
+        <a [routerLink]="['/users']"><i class="fa fa-gear"></i> <span>Usuarios</span></a>
       </li>
     </ul>
     <!-- /.sidebar-menu -->

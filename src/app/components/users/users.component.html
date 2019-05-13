@@ -1,0 +1,65 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <app-breadcrumb [title]="'Usuarios'" [isChild]="true"></app-breadcrumb>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <!-- TABLE: Registered users -->
+    <div class="box box-success">
+      <div class="box-header with-border">
+        <h3 class="box-title">Usuarios</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div class="table-responsive">
+          <table class="table no-margin">
+            <thead>
+              <tr>
+                <th class="text-center" [translate]="'EDIT'"></th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Apellido</th>
+                <th class="text-center">Usuario</th>
+                <th class="text-center">Correo</th>
+                <th class="text-center">Role</th>
+                <th class="text-center">Empresa</th>
+                <th class="text-center" [translate]="'DELETE'"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td class="text-center"><span class="label label-info cursor-pointer"
+                    (click)="generateInvoice(substation.id, substation.time)">{{ 'EDIT' | translate }}</span>
+                </td>
+                <td class="text-center"><span class="label label-success">{{ user.name }}</span>
+                </td>
+                <td class="text-center">{{ user.last_name }}</td>
+                <td class="text-center">{{ user.username }}</td>
+                <td class="text-center">{{ user.email }}</td>
+                <td class="text-center">{{ user.role.name }}</td>
+                <td class="text-center">{{ user.enterprise.name }}</td>
+                <td class="text-center"><span class="label label-warning cursor-pointer"
+                    (click)="generateInvoice(substation.id, substation.time)">{{ 'DELETE' | translate }}</span>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.table-responsive -->
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer clearfix">
+        <button class="btn btn-sm btn-success btn-flat pull-left" (click)="add()">Agregar Usuario</button>
+      </div>
+      <!-- /.box-footer -->
+    </div>
+    <!-- /.box -->
+
+  </section>
+</div>
