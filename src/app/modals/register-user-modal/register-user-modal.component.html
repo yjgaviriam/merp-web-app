@@ -11,7 +11,7 @@
           maxlength="7" autocomplete="off" [ngModelOptions]="{standalone: true}">
       </div>
       <button [disabled]="(!user.lastName || !user.name)" type="button" class="btn btn-success col-xs-12"
-        (click)="saveSubstation()">
+        (click)="saveUser()">
         <span *ngIf="!user.id">{{ 'REGISTER' | translate }}</span>
         <span *ngIf="user.id">{{ 'UPDATE' | translate }}</span>
       </button>

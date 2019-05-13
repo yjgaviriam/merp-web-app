@@ -42,7 +42,7 @@ export class RegisterUserModalComponent {
   /**
    * Realiza el registro de un usuario
    */
-  public registerUser(): void {
+  public saveUser(): void {
     this.userService.registerUser(this.user).subscribe((response) => {
       // Mostramos el mensaje de registro y cerramos el modal
       this.toastr.success(response.data.message);
