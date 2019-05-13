@@ -1,9 +1,12 @@
 {
     "SUBSTATIONS": {
-        "REGISTERED": "Registered Substations",
-        "NAME": "Name",
-        "CODE": "Code"
+        "REGISTERED": "Registered Substations"
     },
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "CODE": "Code",
     "DELETE": "Delete",
-    "EDIT": "Edit"
+    "EDIT": "Edit",
+    "REGISTER": "Register",
+    "UPDATE": "Update"
 }

@@ -1,10 +1,12 @@
 {
     "SUBSTATIONS": {
-        "REGISTERED": "Subestaciones Registradas",
-        "NAME": "Nombre",
-        "CODE": "Código"
+        "REGISTERED": "Subestaciones Registradas"
     },
+    "NAME": "Nombre",
+    "LAST_NAME": "Apellido",
+    "CODE": "Código",
     "DELETE": "Borrar",
-    "EDIT": "Editar"
-
+    "EDIT": "Editar",
+    "REGISTER": "Registrar",
+    "UPDATE": "Actualizar"
 }

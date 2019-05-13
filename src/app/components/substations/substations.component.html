@@ -24,21 +24,20 @@
               <thead>
                 <tr>
                   <th class="text-center" [translate]="'EDIT'"></th>
-                  <th class="text-center" [translate]="'SUBSTATIONS.CODE'"></th>
-                  <th class="text-center" [translate]="'SUBSTATIONS.NAME'"></th>
+                  <th class="text-center" [translate]="'CODE'"></th>
+                  <th class="text-center" [translate]="'NAME'"></th>
                   <th class="text-center" [translate]="'DELETE'"></th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let substation of substations">
                   <td class="text-center"><span class="label label-info cursor-pointer"
-                      (click)="generateInvoice(substation.id, substation.time)">{{ 'EDIT' | translate }}</span>
+                      (click)="update(substation)">{{ 'EDIT' | translate }}</span>
                   </td>
-                  <td class="text-center"><span class="label label-success">{{ substation.code }}</span>
-                  </td>
+                  <td class="text-center">{{ substation.code }}</td>
                   <td class="text-center">{{ substation.name }}</td>
-                  <td class="text-center"><span class="label label-warning cursor-pointer"
-                      (click)="generateInvoice(substation.id, substation.time)">{{ 'DELETE' | translate }}</span>
+                  <td class="text-center"><span class="label label-danger cursor-pointer"
+                      (click)="delete(substation.id)">{{ 'DELETE' | translate }}</span>
                 </tr>
               </tbody>
             </table>
