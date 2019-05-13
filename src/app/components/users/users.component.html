@@ -38,14 +38,13 @@
                 <td class="text-center"><span class="label label-info cursor-pointer"
                     (click)="generateInvoice(substation.id, substation.time)">{{ 'EDIT' | translate }}</span>
                 </td>
-                <td class="text-center"><span class="label label-success">{{ user.name }}</span>
-                </td>
+                <td class="text-center">{{ user.name }}</td>
                 <td class="text-center">{{ user.last_name }}</td>
                 <td class="text-center">{{ user.username }}</td>
                 <td class="text-center">{{ user.email }}</td>
                 <td class="text-center">{{ user.role.name }}</td>
                 <td class="text-center">{{ user.enterprise.name }}</td>
-                <td class="text-center"><span class="label label-warning cursor-pointer"
+                <td class="text-center"><span class="label label-danger cursor-pointer"
                     (click)="generateInvoice(substation.id, substation.time)">{{ 'DELETE' | translate }}</span>
               </tr>
             </tbody>

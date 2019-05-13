@@ -35,7 +35,9 @@ export class RegisterUserModalComponent {
     private dialogRef: MatDialogRef<RegisterUserModalComponent>,
     private userService: UserService,
     private toastr: ToastrService
-  ) { }
+  ) {
+    this.user = new User();
+  }
 
   /**
    * Realiza el registro de un usuario
