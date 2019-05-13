@@ -16,6 +16,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SubstationsComponent } from './components/substations/substations.component';
 import { RegisterSubstationModalComponent } from './modals/register-substation-modal/register-substation-modal.component';
 import { LoginComponent } from './components/login/login.component';
+import { UsersComponent } from './components/users/users.component';
+import { RegisterUserModalComponent } from './modals/register-user-modal/register-user-modal.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,13 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent,
     NotFoundComponent,
     SubstationsComponent,
-    RegisterSubstationModalComponent
+    RegisterSubstationModalComponent,
+    UsersComponent,
+    RegisterUserModalComponent
   ],
   entryComponents: [
-    RegisterSubstationModalComponent
+    RegisterSubstationModalComponent,
+    RegisterUserModalComponent
   ],
   imports: [
     BrowserModule,

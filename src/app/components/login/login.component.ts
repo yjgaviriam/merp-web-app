@@ -1,8 +1,15 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { UserService } from 'src/app/servicies/user.service';
+import { AppConstants } from 'src/app/app-constants';
+import { ToastrService } from 'ngx-toastr';
 
+/**
+ * Componente para inicio de sesion
+ *
+ * @author Jhonier Gaviria M. - May. 12-2019
+ * @version 1.0.0
+ */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,11 +22,25 @@ export class LoginComponent implements OnInit {
    */
   public clientHeight: string;
 
+  /**
+   * Username del usuario
+   */
   public username: string;
 
+  /**
+   * Clave del usuario
+   */
   public password: string;
 
-  constructor(private userService: UserService, private router: Router) { }
+  /**
+   * Contructor de la clase
+   *
+   * @param userService Servicio para trabajar con los usuarios
+   */
+  constructor(
+    private userService: UserService,
+    private toastr: ToastrService
+  ) { }
 
   /**
    * @see {@link https://angular.io/guide/lifecycle-hooks#oninit}
@@ -28,16 +49,28 @@ export class LoginComponent implements OnInit {
     this.clientHeight = window.innerHeight + 'px';
   }
 
+  /**
+   * Escucha el evento de redimensionar la pantalla
+   */
   @HostListener('window:resize', ['$event'])
   onResize(): void {
     this.clientHeight = window.innerHeight + 'px';
   }
 
+  /**
+   * Permite realizar el llamado de inicio de sesion
+   */
   public login(): void {
     this.userService.login(this.username, this.password).subscribe((response: any) => {
-      this.userService.setStatusLogged(this.username, response.data.token);
+      this.userService.setStatusLogged(this.username, response.data.token, response.data.fullName);
       location.reload();
-    }, (error: HttpErrorResponse) => {
+    }, (httpErrorResponse: HttpErrorResponse) => {
+      // Validamos con los codigos de respuesta esperados en un error
+      if (httpErrorResponse.status === AppConstants.HTTP_CODES.ERRORS.HTTP_UNAUTHORIZED) {
+        this.toastr.error(httpErrorResponse.message);
+      } else {
+        this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+      }
     });
   }
 

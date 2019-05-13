@@ -38,7 +38,11 @@ export class AppConstants {
             /**
              * El servidor no procesará la solicitud, porque no puede, o no debe, debido a algo que es percibido como un error del cliente.
              */
-            HTTP_BAD_REQUEST: 400
+            HTTP_BAD_REQUEST: 400,
+            /**
+             * El usuario no ha sido autorizado
+             */
+            HTTP_UNAUTHORIZED: 401
         },
         /**
          * Codigos de aprobacion
