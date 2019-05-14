@@ -90,8 +90,41 @@ export class AppConstants {
     public static readonly TIME_OUT_TOAST_LARGE = 10000;
 
     /**
-     * Nombre del usuario administrador
+     * Roles de la aplicacion
      */
-    public static readonly USER_ADMIN = 'MERP Admin';
+    public static readonly ROLES = {
+        /**
+         * Identificador de rol para el interventor
+         */
+        ROLE_INSPECTOR: 1,
+        /**
+         * Nombre por defecto para el rol de Interventor
+         */
+        ROLE_INSPECTOR_NAME: 'Interventor',
+        /**
+         * Identificador de rol para el interventor
+         */
+        ROLE_ASSISTANT_INSPECTOR: 2,
+        /**
+         * Nombre por defecto para el rol de Auxiliar Interventoria
+         */
+        ROLE_ASSISTANT_INSPECTOR_NAME: 'Auxiliar Interventoria',
+        /**
+         * Identificador de rol para el interventor
+         */
+        ROLE_SUPERVISOR: 3,
+        /**
+         * Nombre por defecto para el rol de Supervisor
+         */
+        ROLE_SUPERVISOR_NAME: 'Supervisor',
+        /**
+         * Identificador de rol para el interventor
+         */
+        ROLE_PLANNER: 4,
+        /**
+         * Nombre por defecto para el rol de Planillero
+         */
+        ROLE_PLANNER_NAME: 'Planillero',
+    };
 }
 

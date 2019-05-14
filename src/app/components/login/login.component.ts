@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
    */
   public login(): void {
     this.userService.login(this.username, this.password).subscribe((response: any) => {
-      this.userService.setStatusLogged(this.username, response.data.token, response.data.fullName);
+      this.userService.setStatusLogged(response.data.user, response.data.token);
       location.reload();
     }, (httpErrorResponse: HttpErrorResponse) => {
       // Validamos con los codigos de respuesta esperados en un error

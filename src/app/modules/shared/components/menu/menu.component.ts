@@ -21,9 +21,9 @@ export class MenuComponent {
   public user: any;
 
   /**
-   * Nombre del usuario administrador
+   * Roles de la aplicacion
    */
-  public readonly USER_ADMIN = AppConstants.USER_ADMIN;
+  public readonly ROLES = AppConstants.ROLES;
 
   /**
    * Constructor de la clase

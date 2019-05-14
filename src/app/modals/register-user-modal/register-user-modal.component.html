@@ -3,12 +3,12 @@
   <div class="panel-body">
     <form class="form-group">
       <div class="form-group">
-        <input [(ngModel)]="user.name" type="text" class="form-control"
-          placeholder="{{ 'NAME' | translate }}" autocomplete="off" s [ngModelOptions]="{standalone: true}">
+        <input [(ngModel)]="user.name" type="text" class="form-control" placeholder="{{ 'NAME' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group">
         <input [(ngModel)]="user.lastName" type="text" class="form-control" placeholder="{{ 'LAST_NAME' | translate }}"
-          maxlength="7" autocomplete="off" [ngModelOptions]="{standalone: true}">
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
       </div>
       <button [disabled]="(!user.lastName || !user.name)" type="button" class="btn btn-success col-xs-12"
         (click)="saveUser()">

@@ -21,7 +21,7 @@ export class AppComponent {
 
   /**
    * Constructor de la clase
-   * 
+   *
    * @param userService Servicio para trabajar con los usuarios
    */
   constructor(private userService: UserService) {

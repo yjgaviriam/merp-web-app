@@ -64,7 +64,7 @@ export class UserService {
     localStorage.removeItem('userLogged');
   }
 
-  public setStatusLogged(username: string, token: string, fullName: string): void {
-    localStorage.setItem('userLogged', JSON.stringify({ username, token, fullName }));
+  public setStatusLogged(user: any, token: string): void {
+    localStorage.setItem('userLogged', JSON.stringify({ user, token }));
   }
 }
