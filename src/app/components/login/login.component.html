@@ -1,12 +1,12 @@
 <div class="text-center content-login" [ngStyle]="{'min-height': clientHeight ? clientHeight : '' }">
   <form class="form-signin">
     <img class="mb-4 img-fluid img-logo" alt="Responsive image" src="../../assets/real-estate-logo.png" alt="">
-    <label for="inputEmail" class="sr-only">Usuario</label>
-    <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="username" id="inputEmail" class="form-control" placeholder="Usuario" required
-      autofocus>
-    <label for="inputPassword" class="sr-only">Contraseña</label>
-    <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" id="inputPassword" class="form-control" placeholder="Contraseña"
-      required>
+    <label for="inputEmail" class="sr-only">{{ 'USERNAME' | translate }}</label>
+    <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="username" id="inputEmail"
+      class="form-control" placeholder="{{ 'USERNAME' | translate }}" required autofocus>
+    <label for="inputPassword" class="sr-only">{{ 'PASSWORD' | translate }}</label>
+    <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" id="inputPassword"
+      class="form-control" placeholder="{{ 'PASSWORD' | translate }}" required>
     <button class="btn btn-lg btn-primary btn-block" (click)="login()">Iniciar Sesión</button>
   </form>
 </div>

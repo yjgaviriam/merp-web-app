@@ -23,7 +23,7 @@ export class CircuitsComponent implements OnInit {
   /**
    * Listado de circuitos
    */
-  public circuits: any[];
+  public circuits: Circuit[];
 
   /**
    * Constructor de la clase
@@ -92,7 +92,7 @@ export class CircuitsComponent implements OnInit {
     this.circuitService.getAllCircuits().subscribe((response) => {
       this.circuits = response.data;
     }, () => {
-      // Mensaje de error cuando no se puede cargar los circuitos, falta de conexion a internet
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.CANT_LOAD_SUBSTATIONS);
     });
   }

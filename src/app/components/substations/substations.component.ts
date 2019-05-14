@@ -23,7 +23,7 @@ export class SubstationsComponent implements OnInit {
   /**
    * Listado de subestaciones
    */
-  public substations: any[];
+  public substations: Substation[];
 
   /**
    * Constructor de la clase
@@ -92,7 +92,7 @@ export class SubstationsComponent implements OnInit {
     this.substationService.getAllSubstations().subscribe((response) => {
       this.substations = response.data;
     }, () => {
-      // Mensaje de error cuando no se puede cargar las subestaciones, falta de conexion a internet
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.CANT_LOAD_SUBSTATIONS);
     });
   }

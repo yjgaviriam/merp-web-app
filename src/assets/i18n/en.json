@@ -9,9 +9,10 @@
     "CODE": "Code",
     "DELETE": "Delete",
     "EDIT": "Edit",
+    "PASSWORD": "Password",
     "REGISTER": "Register",
     "ROLE": "Role",
     "SUBSTATION": "Substation",
     "UPDATE": "Update",
-    "USER": "User"
+    "USERNAME": "User"
 }

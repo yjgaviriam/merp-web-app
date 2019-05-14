@@ -51,7 +51,7 @@ export class RegisterCircuitModalComponent {
     this.substationService.getAllSubstations().subscribe((response) => {
       this.substations = response.data;
     }, () => {
-      // Mensaje de error cuando no se puede cargar las subestaciones, falta de conexion a internet
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.CANT_LOAD_SUBSTATIONS);
     });
     // En caso de llegar la informacion

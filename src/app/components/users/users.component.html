@@ -26,7 +26,7 @@
                 <th class="text-center" [translate]="'EDIT'"></th>
                 <th class="text-center" [translate]="'NAME'"></th>
                 <th class="text-center" [translate]="'LAST_NAME'"></th>
-                <th class="text-center" [translate]="'USER'"></th>
+                <th class="text-center" [translate]="'USERNAME'"></th>
                 <th class="text-center" [translate]="'EMAIL'"></th>
                 <th class="text-center" [translate]="'ROLE'"></th>
                 <th class="text-center" [translate]="'ENTERPRISE'"></th>
@@ -36,7 +36,7 @@
             <tbody>
               <tr *ngFor="let user of users">
                 <td class="text-center"><span class="label label-info cursor-pointer"
-                    (click)="generateInvoice(substation.id, substation.time)">{{ 'EDIT' | translate }}</span>
+                    (click)="update(user)">{{ 'EDIT' | translate }}</span>
                 </td>
                 <td class="text-center">{{ user.name }}</td>
                 <td class="text-center">{{ user.lastName }}</td>
@@ -45,7 +45,7 @@
                 <td class="text-center">{{ user.role.name }}</td>
                 <td class="text-center">{{ user.enterprise.name }}</td>
                 <td class="text-center"><span class="label label-danger cursor-pointer"
-                    (click)="generateInvoice(substation.id, substation.time)">{{ 'DELETE' | translate }}</span>
+                    (click)="delete(user.id)" *ngIf="user.role.id !== ROLES.ROLE_INSPECTOR">{{ 'DELETE' | translate }}</span>
               </tr>
             </tbody>
           </table>

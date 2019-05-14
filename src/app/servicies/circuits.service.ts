@@ -43,8 +43,8 @@ export class CircuitService {
    *
    * @return Un `Observable` con la respuesta del servidor
    */
-  public getAllCircuits(): Observable<{ data: any[] }> {
-    return this.httpClient.get<{ data: any[] }>(`${this.URL_API}v1/circuits/`);
+  public getAllCircuits(): Observable<{ data: Circuit[] }> {
+    return this.httpClient.get<{ data: Circuit[] }>(`${this.URL_API}v1/circuits/`);
   }
 
   /**

@@ -8,8 +8,8 @@ export class User {
     enterprise: Enterprise;
     lastName: string;
     name: string;
-    nickname: string;
     role: Role;
+    username: string;
 
     /**
      * Constructor de la clase
