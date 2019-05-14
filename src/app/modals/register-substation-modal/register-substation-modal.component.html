@@ -3,11 +3,11 @@
   <div class="panel-body">
     <form class="form-group">
       <div class="form-group">
-        <input [(ngModel)]="substation.code" type="text" class="form-control" placeholder="{{ 'CODE' | translate }}" autocomplete="off"
-          s [ngModelOptions]="{standalone: true}">
+        <input [(ngModel)]="substation.code" type="text" class="form-control" placeholder="{{ 'CODE' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group">
-        <input [(ngModel)]="substation.name" type="text" class="form-control" placeholder="{{ 'NAME' | translate }}" maxlength="7"
+        <input [(ngModel)]="substation.name" type="text" class="form-control" placeholder="{{ 'NAME' | translate }}"
           autocomplete="off" [ngModelOptions]="{standalone: true}">
       </div>
       <button [disabled]="(!substation.code || !substation.name)" type="button" class="btn btn-success col-xs-12"

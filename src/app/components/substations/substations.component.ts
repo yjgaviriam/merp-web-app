@@ -66,6 +66,7 @@ export class SubstationsComponent implements OnInit {
     this.substationService.deleteSubstation(substationId).subscribe((response) => {
       // Mostramos el mensaje de registro y cerramos el modal
       this.toastr.success(response.data.message);
+      this.loadStations();
     }, (httpErrorResponse: HttpErrorResponse) => {
       // Validamos con los codigos de respuesta esperados en un error
       if (httpErrorResponse.status === AppConstants.HTTP_CODES.ERRORS.HTTP_BAD_REQUEST) {
@@ -92,7 +93,7 @@ export class SubstationsComponent implements OnInit {
     // Abrimos el modal y le enviamos el valor de la posicion que se encuentra libre
     const dialogRef = this.matDialog.open(RegisterSubstationModalComponent, {
       width: '450px',
-      data: substation
+      data: JSON.parse(JSON.stringify(substation))
     });
 
     // Al cerrar el modal recargamos si tenemos respuesta
