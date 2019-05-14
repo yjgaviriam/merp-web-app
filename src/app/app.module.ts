@@ -18,7 +18,15 @@ import { RegisterSubstationModalComponent } from './modals/register-substation-m
 import { LoginComponent } from './components/login/login.component';
 import { UsersComponent } from './components/users/users.component';
 import { RegisterUserModalComponent } from './modals/register-user-modal/register-user-modal.component';
+import { CircuitsComponent } from './components/circuits/circuits.component';
+import { RegisterCircuitModalComponent } from './modals/register-circuit-modal/register-circuit-modal.component';
 
+/**
+ * Modulo principal de la aplicacion
+ *
+ * @author Jhonier Gaviria M. - May. 09-2019
+ * @version 1.0.0
+ */
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +35,12 @@ import { RegisterUserModalComponent } from './modals/register-user-modal/registe
     SubstationsComponent,
     RegisterSubstationModalComponent,
     UsersComponent,
-    RegisterUserModalComponent
+    RegisterUserModalComponent,
+    CircuitsComponent,
+    RegisterCircuitModalComponent
   ],
   entryComponents: [
+    RegisterCircuitModalComponent,
     RegisterSubstationModalComponent,
     RegisterUserModalComponent
   ],
