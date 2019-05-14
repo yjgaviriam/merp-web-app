@@ -55,16 +55,12 @@ export class SubstationService {
    * @return Un `Observable` con la respuesta de la operacion
    */
   public saveSubstation(substation: Substation): Observable<any> {
-    const httpParams = new FormData();
-    httpParams.append('code', substation.code);
-    httpParams.append('name', substation.name);
 
     // Si contiene id es una actualizacion
     if (substation.id) {
-      httpParams.append('substationId', String(substation.id));
-      return this.httpClient.put(this.URL_API + 'v1/substations/update', httpParams);
+      return this.httpClient.put(this.URL_API + 'v1/substations/update', substation);
     }
 
-    return this.httpClient.post(this.URL_API + 'v1/substations/create', httpParams);
+    return this.httpClient.post(this.URL_API + 'v1/substations/create', substation);
   }
 }
