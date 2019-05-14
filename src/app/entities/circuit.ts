@@ -3,17 +3,17 @@ import { Substation } from './substation';
 export class Circuit {
 
     /**
-     * Identificador de la subestacion
+     * Identificador del circuito
      */
     public id: number;
 
     /**
-     * Codigo de la subestacion
+     * Codigo del circuito
      */
     public code: string;
 
     /**
-     * Nombre de la subestacion
+     * Nombre del circuito
      */
     public name: string;
 

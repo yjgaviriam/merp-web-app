@@ -2,12 +2,16 @@
     "SUBSTATIONS": {
         "REGISTERED": "Subestaciones Registradas"
     },
+    "EMAIL": "Correo Electrónico",
+    "ENTERPRISE": "Empresa",
     "NAME": "Nombre",
     "LAST_NAME": "Apellido",
     "CODE": "Código",
-    "DELETE": "Borrar",
+    "DELETE": "Eliminar",
     "EDIT": "Editar",
     "REGISTER": "Registrar",
+    "ROLE": "Role",
     "SUBSTATION": "Subestación",
-    "UPDATE": "Actualizar"
+    "UPDATE": "Actualizar",
+    "USER": "Usuario"
 }

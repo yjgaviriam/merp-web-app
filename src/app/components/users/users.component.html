@@ -24,12 +24,12 @@
             <thead>
               <tr>
                 <th class="text-center" [translate]="'EDIT'"></th>
-                <th class="text-center">Nombre</th>
-                <th class="text-center">Apellido</th>
-                <th class="text-center">Usuario</th>
-                <th class="text-center">Correo</th>
-                <th class="text-center">Role</th>
-                <th class="text-center">Empresa</th>
+                <th class="text-center" [translate]="'NAME'"></th>
+                <th class="text-center" [translate]="'LAST_NAME'"></th>
+                <th class="text-center" [translate]="'USER'"></th>
+                <th class="text-center" [translate]="'EMAIL'"></th>
+                <th class="text-center" [translate]="'ROLE'"></th>
+                <th class="text-center" [translate]="'ENTERPRISE'"></th>
                 <th class="text-center" [translate]="'DELETE'"></th>
               </tr>
             </thead>
@@ -39,7 +39,7 @@
                     (click)="generateInvoice(substation.id, substation.time)">{{ 'EDIT' | translate }}</span>
                 </td>
                 <td class="text-center">{{ user.name }}</td>
-                <td class="text-center">{{ user.last_name }}</td>
+                <td class="text-center">{{ user.lastName }}</td>
                 <td class="text-center">{{ user.username }}</td>
                 <td class="text-center">{{ user.email }}</td>
                 <td class="text-center">{{ user.role.name }}</td>

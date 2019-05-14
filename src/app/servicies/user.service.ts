@@ -36,8 +36,12 @@ export class UserService {
     return this.httpClient.get<{ data: any[] }>(this.URL_API + 'v1/users/');
   }
 
-  public getStatusLogged(): string {
-    return JSON.parse(localStorage.getItem('userLogged'));
+  public getStatusLogged(): User {
+    return JSON.parse(localStorage.getItem('__USER__'));
+  }
+
+  public getToken(): string {
+    return JSON.parse(localStorage.getItem('__TOKEN__'));
   }
 
   public login(username: string, password: string) {
@@ -61,10 +65,12 @@ export class UserService {
   }
 
   public removeStatusLogged(): void {
-    localStorage.removeItem('userLogged');
+    localStorage.removeItem('__USER__');
+    localStorage.removeItem('__TOKEN__');
   }
 
-  public setStatusLogged(user: any, token: string): void {
-    localStorage.setItem('userLogged', JSON.stringify({ user, token }));
+  public setStatusLogged(user: User, token: string): void {
+    localStorage.setItem('__USER__', JSON.stringify(user));
+    localStorage.setItem('__TOKEN__', JSON.stringify(token));
   }
 }

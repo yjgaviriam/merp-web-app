@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { UserService } from 'src/app/servicies/user.service';
-import { MatDialogRef } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/entities/user';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -28,15 +28,22 @@ export class RegisterUserModalComponent {
    * Constructor de la clase
    *
    * @param dialogRef Referencia para poder devolver data al componente que llamo este modal
+   * @param data Informacion del usuario
    * @param substationService Servicio para trabajar con los usuarios
    * @param toastr Servicio para mostrar mensajes
    */
   constructor(
     private dialogRef: MatDialogRef<RegisterUserModalComponent>,
+    @Inject(MAT_DIALOG_DATA) private data: User,
     private userService: UserService,
     private toastr: ToastrService
   ) {
-    this.user = new User();
+    // En caso de llegar la informacion
+    if (data !== null) {
+      this.user = this.data;
+    } else {
+      this.user = new User();
+    }
   }
 
   /**

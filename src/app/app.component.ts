@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './servicies/user.service';
+import { User } from './entities/user';
 
 /**
  * Componente principal de la aplicacion
@@ -17,7 +18,7 @@ export class AppComponent {
   /**
    * Guarda la info del usuario
    */
-  public user: any;
+  public user: User;
 
   /**
    * Constructor de la clase

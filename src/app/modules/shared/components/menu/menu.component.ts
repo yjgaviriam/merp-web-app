@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppConstants } from 'src/app/app-constants';
 import { UserService } from 'src/app/servicies/user.service';
+import { User } from 'src/app/entities/user';
 
 /**
  * Componente que contiene el menu lateral de la aplicacion
@@ -18,7 +19,7 @@ export class MenuComponent {
   /**
    * Guarda la info del usuario
    */
-  public user: any;
+  public user: User;
 
   /**
    * Roles de la aplicacion
