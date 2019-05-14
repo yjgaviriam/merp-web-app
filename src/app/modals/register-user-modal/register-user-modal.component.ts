@@ -50,7 +50,7 @@ export class RegisterUserModalComponent {
     }, (httpErrorResponse: HttpErrorResponse) => {
       // Validamos con los codigos de respuesta esperados en un error
       if (httpErrorResponse.status === AppConstants.HTTP_CODES.ERRORS.HTTP_BAD_REQUEST) {
-        this.toastr.error(httpErrorResponse.message);
+        this.toastr.error(httpErrorResponse.error.data.message);
       } else {
         this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
       }
