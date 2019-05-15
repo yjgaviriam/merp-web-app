@@ -150,6 +150,6 @@ export class AppConstants {
          * Nombre por defecto para el tipo de sector vereda
          */
         TYPE_TOWN_VILLAGE_NAME: 'Vereda',
-    }
+    };
 }
 
