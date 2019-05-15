@@ -28,11 +28,46 @@ export class EnterpriseService {
   constructor(private httpClient: HttpClient) { }
 
   /**
+   * Permite realizar la eliminacion de un empresa
+   *
+   * @param enterpriseId Identificador de la empresa
+   *
+   * @return Un `Observable` con la respuesta de la operacion
+   */
+  public deleteEnterprise(enterpriseId: number): Observable<any> {
+    return this.httpClient.delete(this.URL_API + 'v1/enterprises/delete/' + enterpriseId);
+  }
+
+  /**
    * Permite obtener todas las empresas
    *
    * @return Un `Observable` con la respuesta del servidor
    */
   public getAllEnterprises(): Observable<{ data: Enterprise[] }> {
     return this.httpClient.get<{ data: Enterprise[] }>(this.URL_API + 'v1/enterprises/');
+  }
+
+  /**
+   * Permite realizar el registro/actualizacion de un empresa
+   *
+   * @param enterprise Informacion de la empresa
+   *
+   * @return Un `Observable` con la respuesta de la operacion
+   */
+  public saveEnterprise(enterprise: Enterprise): Observable<any> {
+
+    // Contiene la informacion para realizar la operacion
+    const data = {
+      id: enterprise.id,
+      name: enterprise.name,
+      nit: enterprise.nit
+    };
+
+    // Si contiene id es una actualizacion
+    if (enterprise.id) {
+      return this.httpClient.put(this.URL_API + 'v1/enterprises/update', data);
+    }
+
+    return this.httpClient.post(this.URL_API + 'v1/enterprises/create', data);
   }
 }

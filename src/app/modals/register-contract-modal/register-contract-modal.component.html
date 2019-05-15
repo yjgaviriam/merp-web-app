@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Registro de Contratos</div>
+  <div class="panel-body">
+    <form class="form-group">
+      <div class="form-group">
+        <input [(ngModel)]="contract.code" type="text" class="form-control" placeholder="{{ 'CODE' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="contract.date" type="date" class="form-control" placeholder="{{ 'NAME' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label [translate]="'ENTERPRISE'"></label>
+        <select class="form-control" [(ngModel)]="contract.enterprise.id" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let enterprise of enterprises" [value]="enterprise.id">{{ enterprise.name }}</option>
+        </select>
+      </div>
+
+      <button [disabled]="(!contract.code || !contract.date || !contract.enterprise.id)" type="button"
+        class="btn btn-success col-xs-12" (click)="saveContract()">
+        <span *ngIf="!contract.id">{{ 'REGISTER' | translate }}</span>
+        <span *ngIf="contract.id">{{ 'UPDATE' | translate }}</span>
+      </button>
+    </form>
+  </div>
+</div>

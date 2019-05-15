@@ -22,6 +22,10 @@ import { CircuitsComponent } from './components/circuits/circuits.component';
 import { RegisterCircuitModalComponent } from './modals/register-circuit-modal/register-circuit-modal.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ContractsComponent } from './components/contracts/contracts.component';
+import { EnterprisesComponent } from './components/enterprises/enterprises.component';
+import { RegisterContractModalComponent } from './modals/register-contract-modal/register-contract-modal.component';
+import { RegisterEnterpriseModalComponent } from './modals/register-enterprise-modal/register-enterprise-modal.component';
 import { RegisterCitiesModalComponent } from './modals/register-cities-modal/register-cities-modal.component';
 import { RegisterProjectModalComponent } from './modals/register-project-modal/register-project-modal.component';
 
@@ -44,12 +48,18 @@ import { RegisterProjectModalComponent } from './modals/register-project-modal/r
     RegisterCircuitModalComponent,
     CitiesComponent,
     ProjectsComponent,
+    ContractsComponent,
+    EnterprisesComponent,
+    RegisterContractModalComponent,
+    RegisterEnterpriseModalComponent,
     RegisterCitiesModalComponent,
     RegisterProjectModalComponent
   ],
   entryComponents: [
     RegisterCircuitModalComponent,
     RegisterCitiesModalComponent,
+    RegisterContractModalComponent,
+    RegisterEnterpriseModalComponent,
     RegisterProjectModalComponent,
     RegisterSubstationModalComponent,
     RegisterUserModalComponent

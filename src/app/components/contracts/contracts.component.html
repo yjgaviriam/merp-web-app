@@ -1,0 +1,58 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <app-breadcrumb [title]="'Contratos'" [isChild]="true"></app-breadcrumb>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <!-- TABLE: Registered contracts -->
+    <div class="box box-success">
+      <div class="box-header with-border">
+        <h3 class="box-title">Contratos Registrados</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div class="table-responsive">
+          <table class="table no-margin">
+            <thead>
+              <tr>
+                <th class="text-center" [translate]="'EDIT'"></th>
+                <th class="text-center" [translate]="'CODE'"></th>
+                <th class="text-center" [translate]="'DATE'"></th>
+                <th class="text-center" [translate]="'ENTERPRISE'"></th>
+                <th class="text-center" [translate]="'DELETE'"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let contract of contracts">
+                <td class="text-center"><span class="label label-info cursor-pointer"
+                    (click)="update(contract)">{{ 'EDIT' | translate }}</span>
+                </td>
+                <td class="text-center">{{ contract.code }}</td>
+                <td class="text-center">{{ contract.date }}</td>
+                <td class="text-center">{{ contract.enterprise.name }}</td>
+                <td class="text-center"><span class="label label-danger cursor-pointer"
+                    (click)="delete(contract.id)">{{ 'DELETE' | translate }}</span>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.table-responsive -->
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer clearfix">
+        <button class="btn btn-sm btn-success btn-flat pull-left" (click)="add()">Agregar Contrato</button>
+      </div>
+      <!-- /.box-footer -->
+    </div>
+    <!-- /.box -->
+
+  </section>
+</div>

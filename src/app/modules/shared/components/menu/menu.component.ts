@@ -34,4 +34,12 @@ export class MenuComponent {
   constructor(private userService: UserService) {
     this.user = this.userService.getStatusLogged();
   }
+
+  /**
+   * Permite cerrar sesion
+   */
+  public logout(): void {
+      this.userService.removeStatusLogged();
+      location.reload();
+  }
 }

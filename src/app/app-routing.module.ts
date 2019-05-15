@@ -6,6 +6,8 @@ import { UsersComponent } from './components/users/users.component';
 import { CircuitsComponent } from './components/circuits/circuits.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ContractsComponent } from './components/contracts/contracts.component';
+import { EnterprisesComponent } from './components/enterprises/enterprises.component';
 
 /**
  * Rutas del modulo principal
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'projects', pathMatch: 'full' },
   { path: 'circuits', component: CircuitsComponent },
   { path: 'cities', component: CitiesComponent },
+  { path: 'contracts', component: ContractsComponent },
+  { path: 'enterprises', component: EnterprisesComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'substations', component: SubstationsComponent },
   { path: 'users', component: UsersComponent },

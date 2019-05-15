@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Registro de Empresas</div>
+  <div class="panel-body">
+    <form class="form-group">
+      <div class="form-group">
+        <input [(ngModel)]="enterprise.name" type="text" class="form-control" placeholder="{{ 'NAME' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="enterprise.nit" type="text" class="form-control" placeholder="{{ 'NIT' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+
+      <button [disabled]="(!enterprise.name || !enterprise.nit)" type="button"
+        class="btn btn-success col-xs-12" (click)="saveEnterprise()">
+        <span *ngIf="!enterprise.id">{{ 'REGISTER' | translate }}</span>
+        <span *ngIf="enterprise.id">{{ 'UPDATE' | translate }}</span>
+      </button>
+    </form>
+  </div>
+</div>
