@@ -2,9 +2,17 @@
     "SUBSTATIONS": {
         "REGISTERED": "Subestaciones Registradas"
     },
+    "ADDRESS": "Dirección",
+    "CIRCUIT": "Circuito",
+    "CITY": "Ciudad",
+    "DATE": "Fecha",
+    "DEPARTMENT": "Departamento",
+    "ELECTRICAL_VOLTAGE_LEVEL": "Nivel de tensión",
     "EMAIL": "Correo Electrónico",
     "ENTERPRISE": "Empresa",
+    "ESTATE": "Inmuebles",
     "NAME": "Nombre",
+    "NIT": "Nit",
     "LAST_NAME": "Apellido",
     "CODE": "Código",
     "DELETE": "Eliminar",
@@ -13,6 +21,8 @@
     "REGISTER": "Registrar",
     "ROLE": "Role",
     "SUBSTATION": "Subestación",
+    "TYPE_NETWORK": "Tipo de red",
+    "TYPE_TOWN": "Tipo de ciudad",
     "UPDATE": "Actualizar",
     "USERNAME": "Usuario"
 }

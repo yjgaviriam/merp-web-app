@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Registro de Municipio</div>
+  <div class="panel-body">
+    <form class="form-group">
+      <div class="form-group">
+        <input [(ngModel)]="city.name" type="text" class="form-control" placeholder="{{ 'NAME' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <select class="form-control" [(ngModel)]="city.department.id" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let department of departments" [value]="department.id">{{ department.name }}</option>
+        </select>
+      </div>
+
+      <button [disabled]="(!city.department.id || !city.name)" type="button" class="btn btn-success col-xs-12"
+        (click)="saveCity()">
+        <span *ngIf="!city.id">{{ 'REGISTER' | translate }}</span>
+        <span *ngIf="city.id">{{ 'UPDATE' | translate }}</span>
+      </button>
+    </form>
+  </div>
+</div>

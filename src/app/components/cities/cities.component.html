@@ -1,0 +1,56 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <app-breadcrumb [title]="'Municipios'" [isChild]="true"></app-breadcrumb>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <!-- TABLE: Registered cities -->
+    <div class="box box-success">
+      <div class="box-header with-border">
+        <h3 class="box-title">Municipios Registrados</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div class="table-responsive">
+          <table class="table no-margin">
+            <thead>
+              <tr>
+                <th class="text-center" [translate]="'EDIT'"></th>
+                <th class="text-center" [translate]="'NAME'"></th>
+                <th class="text-center" [translate]="'DEPARTMENT'"></th>
+                <th class="text-center" [translate]="'DELETE'"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let city of cities">
+                <td class="text-center"><span class="label label-info cursor-pointer"
+                    (click)="update(city)">{{ 'EDIT' | translate }}</span>
+                </td>
+                <td class="text-center">{{ city.name }}</td>
+                <td class="text-center">{{ city.department.name }}</td>
+                <td class="text-center"><span class="label label-danger cursor-pointer"
+                    (click)="delete(city.id)">{{ 'DELETE' | translate }}</span>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.table-responsive -->
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer clearfix">
+        <button class="btn btn-sm btn-success btn-flat pull-left" (click)="add()">Agregar Municipio</button>
+      </div>
+      <!-- /.box-footer -->
+    </div>
+    <!-- /.box -->
+
+  </section>
+</div>
