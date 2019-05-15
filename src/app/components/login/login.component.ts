@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
    * @see {@link https://angular.io/guide/lifecycle-hooks#oninit}
    */
   ngOnInit(): void {
-    this.clientHeight = window.innerHeight + 'px';
+    this.clientHeight = (window.innerHeight - 50) + 'px';
   }
 
   /**
@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
    */
   @HostListener('window:resize', ['$event'])
   onResize(): void {
-    this.clientHeight = window.innerHeight + 'px';
+    this.clientHeight = (window.innerHeight - 50) + 'px';
   }
 
   /**

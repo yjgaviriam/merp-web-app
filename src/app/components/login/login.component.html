@@ -1,6 +1,8 @@
 <div class="text-center content-login" [ngStyle]="{'min-height': clientHeight ? clientHeight : '' }">
   <form class="form-signin">
-    <img class="mb-4 img-fluid img-logo" alt="Responsive image" src="../../assets/real-estate-logo.png" alt="">
+    <div class="form-control">
+      <img class="mb-4 img-fluid" alt="Responsive image" src="../../assets/img/logo.png" alt="">
+    </div>
     <label for="inputEmail" class="sr-only">{{ 'USERNAME' | translate }}</label>
     <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="username" id="inputEmail"
       class="form-control" placeholder="{{ 'USERNAME' | translate }}" required autofocus>
