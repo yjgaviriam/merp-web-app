@@ -1,0 +1,53 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Registro de Projectos</div>
+  <div class="panel-body">
+    <form class="form-group">
+      <div class="form-group">
+        <input [(ngModel)]="project.code" type="text" class="form-control" placeholder="{{ 'CODE' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="project.address" type="text" class="form-control" placeholder="{{ 'ADDRESS' | translate }}"
+          autocomplete="off" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label [translate]="'CIRCUIT'"></label>
+        <select class="form-control" [(ngModel)]="project.circuit.id" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let circuit of circuits" [value]="circuit.id">{{ circuit.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label [translate]="'CITY'"></label>
+        <select class="form-control" [(ngModel)]="project.city.id" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label [translate]="'ELECTRICAL_VOLTAGE_LEVEL'"></label>
+        <select class="form-control" [(ngModel)]="project.electricalVoltageLevel" [ngModelOptions]="{standalone: true}">
+          <option [value]="1">1</option>
+          <option [value]="2">2</option>
+          <option [value]="3">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label [translate]="'TYPE_NETWORK'"></label>
+        <select class="form-control" [(ngModel)]="project.typeNetwork.id" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let typeNetwork of typeNetworks" [value]="typeNetwork.id">{{ typeNetwork.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Localidad</label>
+        <select class="form-control" [(ngModel)]="project.typeTown.id" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let typeTown of typeTowns" [value]="typeTown.id">{{ typeTown.name }}</option>
+        </select>
+      </div>
+
+      <button [disabled]="(!project.code || !project.address || !project.circuit.id || !project.electricalVoltageLevel || !project.typeNetwork.id || !project.typeTown.id)"
+        type="button" class="btn btn-success col-xs-12" (click)="saveProject()">
+        <span *ngIf="!project.id">{{ 'REGISTER' | translate }}</span>
+        <span *ngIf="project.id">{{ 'UPDATE' | translate }}</span>
+      </button>
+    </form>
+  </div>
+</div>

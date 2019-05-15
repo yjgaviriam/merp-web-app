@@ -11,13 +11,14 @@
           autocomplete="off" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group">
+        <label [translate]="'SUBSTATION'"></label>
         <select class="form-control" [(ngModel)]="circuit.substation.id" [ngModelOptions]="{standalone: true}">
           <option *ngFor="let substation of substations" [value]="substation.id">{{ substation.name }}</option>
         </select>
       </div>
 
-      <button [disabled]="(!circuit.code || !circuit.name || !circuit.substation.id)" type="button" class="btn btn-success col-xs-12"
-        (click)="saveCircuit()">
+      <button [disabled]="(!circuit.code || !circuit.name || !circuit.substation.id)" type="button"
+        class="btn btn-success col-xs-12" (click)="saveCircuit()">
         <span *ngIf="!circuit.id">{{ 'REGISTER' | translate }}</span>
         <span *ngIf="circuit.id">{{ 'UPDATE' | translate }}</span>
       </button>

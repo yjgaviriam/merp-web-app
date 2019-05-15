@@ -52,7 +52,7 @@ export class RegisterCircuitModalComponent {
       this.substations = response.data;
     }, () => {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
-      this.toastr.error(AppConstants.MESSAGES.ERROR.CANT_LOAD_SUBSTATIONS);
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
     // En caso de llegar la informacion
     if (data !== null) {

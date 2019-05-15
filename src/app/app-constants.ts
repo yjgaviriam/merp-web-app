@@ -126,5 +126,30 @@ export class AppConstants {
          */
         ROLE_PLANNER_NAME: 'Planillero',
     };
+
+    /**
+     * Tipos de localidad de la aplicacion
+     */
+    public static readonly TYPES_TOWNS = {
+        /**
+         * Identificador por defecto para el tipo de sector barrio
+         */
+        TYPE_TOWN_NEIGHBORHOOD: 1,
+
+        /**
+         * Identificador por defecto para el tipo de sector vereda
+         */
+        TYPE_TOWN_VILLAGE: 2,
+
+        /**
+         * Nombre por defecto para el tipo de sector barrio
+         */
+        TYPE_TOWN_NEIGHBORHOOD_NAME: 'Barrio',
+
+        /**
+         * Nombre por defecto para el tipo de sector vereda
+         */
+        TYPE_TOWN_VILLAGE_NAME: 'Vereda',
+    }
 }
 

@@ -11,7 +11,9 @@
     "EMAIL": "Email",
     "ENTERPRISE": "Enterprise",
     "ESTATE": "Estate",
+    "LOGOUT": "Logout",
     "NAME": "Name",
+    "NEIGHBORHOOD": "Neighborhood",
     "NIT": "Nit",
     "LAST_NAME": "Last Name",
     "CODE": "Code",
@@ -20,9 +22,10 @@
     "PASSWORD": "Password",
     "REGISTER": "Register",
     "ROLE": "Role",
+    "STATUS": "Status",
     "SUBSTATION": "Substation",
     "TYPE_NETWORK": "Type Network",
-    "TYPE_TOWN": "Type Town",
     "UPDATE": "Update",
-    "USERNAME": "User"
+    "USERNAME": "User",
+    "VILLAGE": "Village"
 }

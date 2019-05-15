@@ -93,14 +93,14 @@ export class CircuitsComponent implements OnInit {
       this.circuits = response.data;
     }, () => {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
-      this.toastr.error(AppConstants.MESSAGES.ERROR.CANT_LOAD_SUBSTATIONS);
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
   }
 
   /**
    * Permite llamar el modal para la actualizacion de un circuito
    *
-   * @param circuit Subestacion a actualizar
+   * @param circuit Circuito a actualizar
    */
   public update(circuit: Circuit): void {
     // Abrimos el modal y le enviamos el valor de la posicion que se encuentra libre

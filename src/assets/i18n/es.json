@@ -11,7 +11,9 @@
     "EMAIL": "Correo Electrónico",
     "ENTERPRISE": "Empresa",
     "ESTATE": "Inmuebles",
+    "LOGOUT": "Cerrar Sesión",
     "NAME": "Nombre",
+    "NEIGHBORHOOD": "Barrio",
     "NIT": "Nit",
     "LAST_NAME": "Apellido",
     "CODE": "Código",
@@ -20,9 +22,10 @@
     "PASSWORD": "Contraseña",
     "REGISTER": "Registrar",
     "ROLE": "Role",
+    "STATUS": "Estado",
     "SUBSTATION": "Subestación",
-    "TYPE_NETWORK": "Tipo de red",
-    "TYPE_TOWN": "Tipo de ciudad",
+    "TYPE_NETWORK": "Tipo de Red",
     "UPDATE": "Actualizar",
-    "USERNAME": "Usuario"
+    "USERNAME": "Usuario",
+    "VILLAGE": "Vereda"
 }

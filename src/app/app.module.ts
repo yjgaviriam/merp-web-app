@@ -21,7 +21,9 @@ import { RegisterUserModalComponent } from './modals/register-user-modal/registe
 import { CircuitsComponent } from './components/circuits/circuits.component';
 import { RegisterCircuitModalComponent } from './modals/register-circuit-modal/register-circuit-modal.component';
 import { CitiesComponent } from './components/cities/cities.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { RegisterCitiesModalComponent } from './modals/register-cities-modal/register-cities-modal.component';
+import { RegisterProjectModalComponent } from './modals/register-project-modal/register-project-modal.component';
 
 /**
  * Modulo principal de la aplicacion
@@ -41,10 +43,14 @@ import { RegisterCitiesModalComponent } from './modals/register-cities-modal/reg
     CircuitsComponent,
     RegisterCircuitModalComponent,
     CitiesComponent,
+    ProjectsComponent,
+    RegisterCitiesModalComponent,
+    RegisterProjectModalComponent
   ],
   entryComponents: [
     RegisterCircuitModalComponent,
     RegisterCitiesModalComponent,
+    RegisterProjectModalComponent,
     RegisterSubstationModalComponent,
     RegisterUserModalComponent
   ],
