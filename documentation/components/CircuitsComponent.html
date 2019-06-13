@@ -1,0 +1,903 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>merp-web-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">merp-web-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CircuitsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/circuits/circuits.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que contiene el listado de circuitos</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-circuits</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./circuits.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./circuits.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#circuits">circuits</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#delete">delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadCircuits">loadCircuits</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#update">update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(circuitService: <a href="../injectables/CircuitService.html">CircuitService</a>, matDialog: MatDialog, toastr: ToastrService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/circuits/circuits.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor de la clase</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>circuitService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CircuitService.html" target="_self" >CircuitService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los circuitos</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>matDialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para abrir modales con angular material</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para mostrar mensajes</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="add"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            add
+                        </b>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>add()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/components/circuits/circuits.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite llamar el modal para realizar el registro de un circuito</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(circuitId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/components/circuits/circuits.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar un circuito</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>circuitId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Identificador del circuito a eliminar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadCircuits"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            loadCircuits
+                        </b>
+                        <a href="#loadCircuits"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadCircuits()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/app/components/circuits/circuits.component.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Se encarga de realizar el llamado para cargar los circuitos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/components/circuits/circuits.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(circuit: <a href="../classes/Circuit.html">Circuit</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/components/circuits/circuits.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite llamar el modal para la actualizacion de un circuito</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>circuit</td>
+                                    <td>
+                                                <code><a href="../classes/Circuit.html" target="_self" >Circuit</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Circuito a actualizar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="circuits"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            circuits</b>
+                            <a href="#circuits"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Circuit.html" target="_self" >Circuit[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/circuits/circuits.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Listado de circuitos</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { AppConstants } from &#x27;src/app/app-constants&#x27;;
+import { MatDialog } from &#x27;@angular/material&#x27;;
+import { Circuit } from &#x27;src/app/entities/circuit&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { CircuitService } from &#x27;src/app/servicies/circuits.service&#x27;;
+import { RegisterCircuitModalComponent } from &#x27;src/app/modals/register-circuit-modal/register-circuit-modal.component&#x27;;
+
+/**
+ * Componente que contiene el listado de circuitos
+ *
+ * @author Jhonier Gaviria M. - May. 13-2019
+ * @version 1.0.0
+ */
+@Component({
+  selector: &#x27;app-circuits&#x27;,
+  templateUrl: &#x27;./circuits.component.html&#x27;,
+  styleUrls: [&#x27;./circuits.component.css&#x27;]
+})
+export class CircuitsComponent implements OnInit {
+
+  /**
+   * Listado de circuitos
+   */
+  public circuits: Circuit[];
+
+  /**
+   * Constructor de la clase
+   *
+   * @param circuitService Servicio para trabajar con los circuitos
+   * @param matDialog Servicio para abrir modales con angular material
+   * @param toastr Servicio para mostrar mensajes
+   */
+  constructor(
+    private circuitService: CircuitService,
+    private matDialog: MatDialog,
+    private toastr: ToastrService
+  ) {
+    this.circuits &#x3D; [];
+  }
+
+  /**
+   * @see {@link https://angular.io/guide/lifecycle-hooks#oninit}
+   */
+  public ngOnInit(): void {
+    this.loadCircuits();
+  }
+
+  /**
+   * Permite llamar el modal para realizar el registro de un circuito
+   */
+  public add(): void {
+    // Abrimos el modal y le enviamos el valor de la posicion que se encuentra libre
+    const dialogRef &#x3D; this.matDialog.open(RegisterCircuitModalComponent, {
+      width: &#x27;450px&#x27;,
+      data: null
+    });
+
+    // Al cerrar el modal recargamos si tenemos respuesta
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.loadCircuits();
+      }
+    });
+  }
+
+  /**
+   * Permite eliminar un circuito
+   *
+   * @param circuitId Identificador del circuito a eliminar
+   */
+  public delete(circuitId: number): void {
+    this.circuitService.deleteCircuit(circuitId).subscribe((response) &#x3D;&gt; {
+      // Mostramos el mensaje de registro y cerramos el modal
+      this.toastr.success(response.data.message);
+      this.loadCircuits();
+    }, (httpErrorResponse: HttpErrorResponse) &#x3D;&gt; {
+      // Validamos con los codigos de respuesta esperados en un error
+      if (httpErrorResponse.status &#x3D;&#x3D;&#x3D; AppConstants.HTTP_CODES.ERRORS.HTTP_BAD_REQUEST) {
+        this.toastr.error(httpErrorResponse.error.data.message);
+      } else {
+        this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+      }
+    });
+  }
+
+  /**
+   * Se encarga de realizar el llamado para cargar los circuitos
+   */
+  private loadCircuits(): void {
+    this.circuitService.getAllCircuits().subscribe((response) &#x3D;&gt; {
+      this.circuits &#x3D; response.data;
+    }, () &#x3D;&gt; {
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+    });
+  }
+
+  /**
+   * Permite llamar el modal para la actualizacion de un circuito
+   *
+   * @param circuit Circuito a actualizar
+   */
+  public update(circuit: Circuit): void {
+    // Abrimos el modal y le enviamos el valor de la posicion que se encuentra libre
+    const dialogRef &#x3D; this.matDialog.open(RegisterCircuitModalComponent, {
+      width: &#x27;450px&#x27;,
+      data: JSON.parse(JSON.stringify(circuit))
+    });
+
+    // Al cerrar el modal recargamos si tenemos respuesta
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.loadCircuits();
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Content Wrapper. Contains page content --&gt;
+&lt;div class&#x3D;&quot;content-wrapper&quot;&gt;
+  &lt;!-- Content Header (Page header) --&gt;
+  &lt;app-breadcrumb [title]&#x3D;&quot;&#x27;Circuitos&#x27;&quot; [isChild]&#x3D;&quot;true&quot;&gt;&lt;/app-breadcrumb&gt;
+
+  &lt;!-- Main content --&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
+
+    &lt;!-- TABLE: Registered circuits --&gt;
+    &lt;div class&#x3D;&quot;box box-success&quot;&gt;
+      &lt;div class&#x3D;&quot;box-header with-border&quot;&gt;
+        &lt;h3 class&#x3D;&quot;box-title&quot;&gt;Circuitos Registrados&lt;/h3&gt;
+
+        &lt;div class&#x3D;&quot;box-tools pull-right&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-box-tool&quot; data-widget&#x3D;&quot;collapse&quot;&gt;&lt;i class&#x3D;&quot;fa fa-minus&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-box-tool&quot; data-widget&#x3D;&quot;remove&quot;&gt;&lt;i class&#x3D;&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- /.box-header --&gt;
+      &lt;div class&#x3D;&quot;box-body&quot;&gt;
+        &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+          &lt;table class&#x3D;&quot;table no-margin&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;EDIT&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;CODE&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;NAME&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;SUBSTATION&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;DELETE&#x27;&quot;&gt;&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr *ngFor&#x3D;&quot;let circuit of circuits&quot;&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;&lt;span class&#x3D;&quot;label label-info cursor-pointer&quot;
+                    (click)&#x3D;&quot;update(circuit)&quot;&gt;{{ &#x27;EDIT&#x27; | translate }}&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ circuit.code }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ circuit.name }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ circuit.substation.name }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;&lt;span class&#x3D;&quot;label label-danger cursor-pointer&quot;
+                    (click)&#x3D;&quot;delete(circuit.id)&quot;&gt;{{ &#x27;DELETE&#x27; | translate }}&lt;/span&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;!-- /.table-responsive --&gt;
+      &lt;/div&gt;
+      &lt;!-- /.box-body --&gt;
+      &lt;div class&#x3D;&quot;box-footer clearfix&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-sm btn-success btn-flat pull-left&quot; (click)&#x3D;&quot;add()&quot;&gt;Agregar Circuito&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;!-- /.box-footer --&gt;
+    &lt;/div&gt;
+    &lt;!-- /.box --&gt;
+
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./circuits.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Content Wrapper. Contains page content --><div class="content-wrapper">  <!-- Content Header (Page header) -->  <app-breadcrumb [title]="\'Circuitos\'" [isChild]="true"></app-breadcrumb>  <!-- Main content -->  <section class="content">    <!-- TABLE: Registered circuits -->    <div class="box box-success">      <div class="box-header with-border">        <h3 class="box-title">Circuitos Registrados</h3>        <div class="box-tools pull-right">          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>          </button>          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>        </div>      </div>      <!-- /.box-header -->      <div class="box-body">        <div class="table-responsive">          <table class="table no-margin">            <thead>              <tr>                <th class="text-center" [translate]="\'EDIT\'"></th>                <th class="text-center" [translate]="\'CODE\'"></th>                <th class="text-center" [translate]="\'NAME\'"></th>                <th class="text-center" [translate]="\'SUBSTATION\'"></th>                <th class="text-center" [translate]="\'DELETE\'"></th>              </tr>            </thead>            <tbody>              <tr *ngFor="let circuit of circuits">                <td class="text-center"><span class="label label-info cursor-pointer"                    (click)="update(circuit)">{{ \'EDIT\' | translate }}</span>                </td>                <td class="text-center">{{ circuit.code }}</td>                <td class="text-center">{{ circuit.name }}</td>                <td class="text-center">{{ circuit.substation.name }}</td>                <td class="text-center"><span class="label label-danger cursor-pointer"                    (click)="delete(circuit.id)">{{ \'DELETE\' | translate }}</span>              </tr>            </tbody>          </table>        </div>        <!-- /.table-responsive -->      </div>      <!-- /.box-body -->      <div class="box-footer clearfix">        <button class="btn btn-sm btn-success btn-flat pull-left" (click)="add()">Agregar Circuito</button>      </div>      <!-- /.box-footer -->    </div>    <!-- /.box -->  </section></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'CircuitsComponent', 'selector': 'app-circuits'},{'name': 'CitiesComponent', 'selector': 'app-cities'},{'name': 'ContractsComponent', 'selector': 'app-contracts'},{'name': 'EnterprisesComponent', 'selector': 'app-enterprises'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RegisterCircuitModalComponent', 'selector': 'app-register-circuit-modal'},{'name': 'RegisterCitiesModalComponent', 'selector': 'app-register-cities-modal'},{'name': 'RegisterContractModalComponent', 'selector': 'app-register-contract-modal'},{'name': 'RegisterEnterpriseModalComponent', 'selector': 'app-register-enterprise-modal'},{'name': 'RegisterProjectModalComponent', 'selector': 'app-register-project-modal'},{'name': 'RegisterSubstationModalComponent', 'selector': 'app-register-substation-modal'},{'name': 'RegisterUserModalComponent', 'selector': 'app-register-user-modal'},{'name': 'SubstationsComponent', 'selector': 'app-substations'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CircuitsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CircuitsComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

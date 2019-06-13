@@ -1,0 +1,951 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>merp-web-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">merp-web-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>UsersComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/users/users.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente para gestion de los usuarios de la aplicacion</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-users</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./users.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./users.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#ROLES">ROLES</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#users">users</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#add">add</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#delete">delete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadUsers">loadUsers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#update">update</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userService: <a href="../injectables/UserService.html">UserService</a>, matDialog: MatDialog, toastr: ToastrService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/users/users.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor de la clase</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los usuarios</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>matDialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para abrir modales con angular material</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para mostrar mensajes</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="add"></a>
+                    <span class="name">
+                        <b>
+                            add
+                        </b>
+                        <a href="#add"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>add()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/components/users/users.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite llamar el modal para realizar el registro de un usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/components/users/users.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite eliminar un usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Identificador del usuario a eliminar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUsers"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            loadUsers
+                        </b>
+                        <a href="#loadUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/components/users/users.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Se encarga de realizar el llamado para cargar los usuarios</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/components/users/users.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            update
+                        </b>
+                        <a href="#update"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>update(user: <a href="../classes/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/components/users/users.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Permite llamar el modal para la actualizacion de un usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../classes/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Usuario a actualizar</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ROLES"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Readonly</span>
+                            ROLES</b>
+                            <a href="#ROLES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>AppConstants.ROLES</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/users/users.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Roles de la aplicacion</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="users"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            users</b>
+                            <a href="#users"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/users/users.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Listado de usuarios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { UserService } from &#x27;src/app/servicies/user.service&#x27;;
+import { MatDialog } from &#x27;@angular/material&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { RegisterUserModalComponent } from &#x27;src/app/modals/register-user-modal/register-user-modal.component&#x27;;
+import { AppConstants } from &#x27;src/app/app-constants&#x27;;
+import { User } from &#x27;src/app/entities/user&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+
+/**
+ * Componente para gestion de los usuarios de la aplicacion
+ *
+ * @author Jhonier Gaviria M. - May. 12-2019
+ * @version 1.0.0
+ */
+@Component({
+  selector: &#x27;app-users&#x27;,
+  templateUrl: &#x27;./users.component.html&#x27;,
+  styleUrls: [&#x27;./users.component.css&#x27;]
+})
+export class UsersComponent implements OnInit {
+
+  /**
+   * Roles de la aplicacion
+   */
+  public readonly ROLES &#x3D; AppConstants.ROLES;
+
+  /**
+   * Listado de usuarios
+   */
+  public users: User[];
+
+  /**
+   * Constructor de la clase
+   *
+   * @param userService Servicio para trabajar con los usuarios
+   * @param matDialog Servicio para abrir modales con angular material
+   * @param toastr Servicio para mostrar mensajes
+   */
+  constructor(
+    private userService: UserService,
+    private matDialog: MatDialog,
+    private toastr: ToastrService
+  ) {
+    this.users &#x3D; [];
+  }
+
+  /**
+   * @see {@link https://angular.io/guide/lifecycle-hooks#oninit}
+   */
+  public ngOnInit(): void {
+    this.loadUsers();
+  }
+
+  /**
+   * Permite llamar el modal para realizar el registro de un usuario
+   */
+  add() {
+    // Abrimos el modal y le enviamos el valor de la posicion que se encuentra libre
+    const dialogRef &#x3D; this.matDialog.open(RegisterUserModalComponent, {
+      width: &#x27;450px&#x27;,
+      data: null
+    });
+
+    // Al cerrar el modal recargamos si tenemos respuesta
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.loadUsers();
+      }
+    });
+  }
+
+  /**
+   * Permite eliminar un usuario
+   *
+   * @param userId Identificador del usuario a eliminar
+   */
+  public delete(userId: number): void {
+    this.userService.deleteUser(userId).subscribe((response) &#x3D;&gt; {
+      // Mostramos el mensaje de registro y cerramos el modal
+      this.toastr.success(response.data.message);
+      this.loadUsers();
+    }, (httpErrorResponse: HttpErrorResponse) &#x3D;&gt; {
+      // Validamos con los codigos de respuesta esperados en un error
+      if (httpErrorResponse.status &#x3D;&#x3D;&#x3D; AppConstants.HTTP_CODES.ERRORS.HTTP_BAD_REQUEST) {
+        this.toastr.error(httpErrorResponse.error.data.message);
+      } else {
+        this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+      }
+    });
+  }
+
+  /**
+   * Se encarga de realizar el llamado para cargar los usuarios
+   */
+  private loadUsers(): void {
+    this.userService.getAllUsers().subscribe((result) &#x3D;&gt; {
+      this.users &#x3D; result.data;
+    }, () &#x3D;&gt; {
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+    });
+  }
+
+  /**
+   * Permite llamar el modal para la actualizacion de un usuario
+   *
+   * @param user Usuario a actualizar
+   */
+  public update(user: User): void {
+    // Abrimos el modal y le enviamos el valor de la posicion que se encuentra libre
+    const dialogRef &#x3D; this.matDialog.open(RegisterUserModalComponent, {
+      width: &#x27;450px&#x27;,
+      data: JSON.parse(JSON.stringify(user))
+    });
+
+    // Al cerrar el modal recargamos si tenemos respuesta
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.loadUsers();
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Content Wrapper. Contains page content --&gt;
+&lt;div class&#x3D;&quot;content-wrapper&quot;&gt;
+  &lt;!-- Content Header (Page header) --&gt;
+  &lt;app-breadcrumb [title]&#x3D;&quot;&#x27;Usuarios&#x27;&quot; [isChild]&#x3D;&quot;true&quot;&gt;&lt;/app-breadcrumb&gt;
+
+  &lt;!-- Main content --&gt;
+  &lt;section class&#x3D;&quot;content&quot;&gt;
+
+    &lt;!-- TABLE: Registered users --&gt;
+    &lt;div class&#x3D;&quot;box box-success&quot;&gt;
+      &lt;div class&#x3D;&quot;box-header with-border&quot;&gt;
+        &lt;h3 class&#x3D;&quot;box-title&quot;&gt;Usuarios&lt;/h3&gt;
+
+        &lt;div class&#x3D;&quot;box-tools pull-right&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-box-tool&quot; data-widget&#x3D;&quot;collapse&quot;&gt;&lt;i class&#x3D;&quot;fa fa-minus&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-box-tool&quot; data-widget&#x3D;&quot;remove&quot;&gt;&lt;i class&#x3D;&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- /.box-header --&gt;
+      &lt;div class&#x3D;&quot;box-body&quot;&gt;
+        &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+          &lt;table class&#x3D;&quot;table no-margin&quot;&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;EDIT&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;NAME&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;LAST_NAME&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;USERNAME&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;EMAIL&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;ROLE&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;ENTERPRISE&#x27;&quot;&gt;&lt;/th&gt;
+                &lt;th class&#x3D;&quot;text-center&quot; [translate]&#x3D;&quot;&#x27;DELETE&#x27;&quot;&gt;&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr *ngFor&#x3D;&quot;let user of users&quot;&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;&lt;span class&#x3D;&quot;label label-info cursor-pointer&quot;
+                    (click)&#x3D;&quot;update(user)&quot;&gt;{{ &#x27;EDIT&#x27; | translate }}&lt;/span&gt;
+                &lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ user.name }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ user.lastName }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ user.username }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ user.email }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ user.role.name }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ user.enterprise.name }}&lt;/td&gt;
+                &lt;td class&#x3D;&quot;text-center&quot;&gt;&lt;span class&#x3D;&quot;label label-danger cursor-pointer&quot;
+                    (click)&#x3D;&quot;delete(user.id)&quot; *ngIf&#x3D;&quot;user.role.id !&#x3D;&#x3D; ROLES.ROLE_INSPECTOR&quot;&gt;{{ &#x27;DELETE&#x27; | translate }}&lt;/span&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+        &lt;!-- /.table-responsive --&gt;
+      &lt;/div&gt;
+      &lt;!-- /.box-body --&gt;
+      &lt;div class&#x3D;&quot;box-footer clearfix&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-sm btn-success btn-flat pull-left&quot; (click)&#x3D;&quot;add()&quot;&gt;Agregar Usuario&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;!-- /.box-footer --&gt;
+    &lt;/div&gt;
+    &lt;!-- /.box --&gt;
+
+  &lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./users.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Content Wrapper. Contains page content --><div class="content-wrapper">  <!-- Content Header (Page header) -->  <app-breadcrumb [title]="\'Usuarios\'" [isChild]="true"></app-breadcrumb>  <!-- Main content -->  <section class="content">    <!-- TABLE: Registered users -->    <div class="box box-success">      <div class="box-header with-border">        <h3 class="box-title">Usuarios</h3>        <div class="box-tools pull-right">          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>          </button>          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>        </div>      </div>      <!-- /.box-header -->      <div class="box-body">        <div class="table-responsive">          <table class="table no-margin">            <thead>              <tr>                <th class="text-center" [translate]="\'EDIT\'"></th>                <th class="text-center" [translate]="\'NAME\'"></th>                <th class="text-center" [translate]="\'LAST_NAME\'"></th>                <th class="text-center" [translate]="\'USERNAME\'"></th>                <th class="text-center" [translate]="\'EMAIL\'"></th>                <th class="text-center" [translate]="\'ROLE\'"></th>                <th class="text-center" [translate]="\'ENTERPRISE\'"></th>                <th class="text-center" [translate]="\'DELETE\'"></th>              </tr>            </thead>            <tbody>              <tr *ngFor="let user of users">                <td class="text-center"><span class="label label-info cursor-pointer"                    (click)="update(user)">{{ \'EDIT\' | translate }}</span>                </td>                <td class="text-center">{{ user.name }}</td>                <td class="text-center">{{ user.lastName }}</td>                <td class="text-center">{{ user.username }}</td>                <td class="text-center">{{ user.email }}</td>                <td class="text-center">{{ user.role.name }}</td>                <td class="text-center">{{ user.enterprise.name }}</td>                <td class="text-center"><span class="label label-danger cursor-pointer"                    (click)="delete(user.id)" *ngIf="user.role.id !== ROLES.ROLE_INSPECTOR">{{ \'DELETE\' | translate }}</span>              </tr>            </tbody>          </table>        </div>        <!-- /.table-responsive -->      </div>      <!-- /.box-body -->      <div class="box-footer clearfix">        <button class="btn btn-sm btn-success btn-flat pull-left" (click)="add()">Agregar Usuario</button>      </div>      <!-- /.box-footer -->    </div>    <!-- /.box -->  </section></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'CircuitsComponent', 'selector': 'app-circuits'},{'name': 'CitiesComponent', 'selector': 'app-cities'},{'name': 'ContractsComponent', 'selector': 'app-contracts'},{'name': 'EnterprisesComponent', 'selector': 'app-enterprises'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RegisterCircuitModalComponent', 'selector': 'app-register-circuit-modal'},{'name': 'RegisterCitiesModalComponent', 'selector': 'app-register-cities-modal'},{'name': 'RegisterContractModalComponent', 'selector': 'app-register-contract-modal'},{'name': 'RegisterEnterpriseModalComponent', 'selector': 'app-register-enterprise-modal'},{'name': 'RegisterProjectModalComponent', 'selector': 'app-register-project-modal'},{'name': 'RegisterSubstationModalComponent', 'selector': 'app-register-substation-modal'},{'name': 'RegisterUserModalComponent', 'selector': 'app-register-user-modal'},{'name': 'SubstationsComponent', 'selector': 'app-substations'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UsersComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UsersComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

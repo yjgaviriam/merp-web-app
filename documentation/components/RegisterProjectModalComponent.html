@@ -1,0 +1,883 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>merp-web-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">merp-web-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>RegisterProjectModalComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modals/register-project-modal/register-project-modal.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Modal para registrar un nuevo proyecto</p>
+
+    </p>
+
+
+
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+    </div>
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-register-project-modal</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./register-project-modal.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./register-project-modal.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#circuits">circuits</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#cities">cities</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#project">project</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#typeNetworks">typeNetworks</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#typeTowns">typeTowns</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#saveProject">saveProject</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dialogRef: <a href="../classes/Project.html">MatDialogRef<RegisterProjectModalComponent></a>, data: <a href="../classes/Project.html">Project</a>, projectService: <a href="../injectables/ProjectService.html">ProjectService</a>, circuitService: <a href="../injectables/CircuitService.html">CircuitService</a>, cityService: <a href="../injectables/CityService.html">CityService</a>, typeNetworkService: <a href="../injectables/TypeNetworkService.html">TypeNetworkService</a>, typeTownService: <a href="../injectables/TypeTownService.html">TypeTownService</a>, toastr: ToastrService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor de la clase</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dialogRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Project.html" target="_self" >MatDialogRef&lt;RegisterProjectModalComponent&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Referencia para poder devolver data al componente que llamo este modal</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Project.html" target="_self" >Project</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Informacion del circuito</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>projectService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ProjectService.html" target="_self" >ProjectService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los proyectos</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>circuitService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CircuitService.html" target="_self" >CircuitService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los circuitos</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>cityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CityService.html" target="_self" >CityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los municipios</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>typeNetworkService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TypeNetworkService.html" target="_self" >TypeNetworkService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los tipos de red</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>typeTownService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TypeTownService.html" target="_self" >TypeTownService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para trabajar con los tipos de localidad</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Servicio para mostrar mensajes</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveProject"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            saveProject
+                        </b>
+                        <a href="#saveProject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveProject()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Realiza el guardado de un proyecto</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="circuits"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            circuits</b>
+                            <a href="#circuits"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Circuit.html" target="_self" >Circuit[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Listado de circuitos</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cities"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            cities</b>
+                            <a href="#cities"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/City.html" target="_self" >City[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Listado de municipios</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="project"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            project</b>
+                            <a href="#project"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Project.html" target="_self" >Project</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contiene la informacion del proyecto</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="typeNetworks"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            typeNetworks</b>
+                            <a href="#typeNetworks"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/TypeNetwork.html" target="_self" >TypeNetwork[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Listado de tipos de red</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="typeTowns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            typeTowns</b>
+                            <a href="#typeTowns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/TypeTown.html" target="_self" >TypeTown[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Listado de tipos de localidad</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject } from &#x27;@angular/core&#x27;;
+import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { AppConstants } from &#x27;src/app/app-constants&#x27;;
+import { Project } from &#x27;src/app/entities/project&#x27;;
+import { CircuitService } from &#x27;src/app/servicies/circuits.service&#x27;;
+import { Circuit } from &#x27;src/app/entities/circuit&#x27;;
+import { ProjectService } from &#x27;src/app/servicies/project.service&#x27;;
+import { CityService } from &#x27;src/app/servicies/city.service&#x27;;
+import { City } from &#x27;src/app/entities/city&#x27;;
+import { TypeNetwork } from &#x27;src/app/entities/type-network&#x27;;
+import { TypeTown } from &#x27;src/app/entities/type-town&#x27;;
+import { TypeNetworkService } from &#x27;src/app/servicies/type-network.service&#x27;;
+import { TypeTownService } from &#x27;src/app/servicies/type-town.service&#x27;;
+
+/**
+ * Modal para registrar un nuevo proyecto
+ *
+ * @author Jhonier Gaviria M. - May. 14-2019
+ * @version 1.0.0
+ */
+@Component({
+  selector: &#x27;app-register-project-modal&#x27;,
+  templateUrl: &#x27;./register-project-modal.component.html&#x27;,
+  styleUrls: [&#x27;./register-project-modal.component.css&#x27;]
+})
+export class RegisterProjectModalComponent {
+
+  /**
+   * Listado de circuitos
+   */
+  public circuits: Circuit[];
+
+  /**
+   * Listado de municipios
+   */
+  public cities: City[];
+
+  /**
+   * Contiene la informacion del proyecto
+   */
+  public project: Project;
+
+  /**
+   * Listado de tipos de red
+   */
+  public typeNetworks: TypeNetwork[];
+
+  /**
+   * Listado de tipos de localidad
+   */
+  public typeTowns: TypeTown[];
+
+  /**
+   * Constructor de la clase
+   *
+   * @param dialogRef Referencia para poder devolver data al componente que llamo este modal
+   * @param data Informacion del circuito
+   * @param projectService Servicio para trabajar con los proyectos
+   * @param circuitService Servicio para trabajar con los circuitos
+   * @param cityService Servicio para trabajar con los municipios
+   * @param typeNetworkService Servicio para trabajar con los tipos de red
+   * @param typeTownService Servicio para trabajar con los tipos de localidad
+   * @param toastr Servicio para mostrar mensajes
+   */
+  constructor(
+    private dialogRef: MatDialogRef&lt;RegisterProjectModalComponent&gt;,
+    @Inject(MAT_DIALOG_DATA) private data: Project,
+    private projectService: ProjectService,
+    private circuitService: CircuitService,
+    private cityService: CityService,
+    private typeNetworkService: TypeNetworkService,
+    private typeTownService: TypeTownService,
+    private toastr: ToastrService
+  ) {
+    // Se cargan los circuitos
+    this.circuitService.getAllCircuits().subscribe((response) &#x3D;&gt; {
+      this.circuits &#x3D; response.data;
+    }, () &#x3D;&gt; {
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+    });
+
+    // Se cargan los municipios
+    this.cityService.getAllCities().subscribe((response) &#x3D;&gt; {
+      this.cities &#x3D; response.data;
+    }, () &#x3D;&gt; {
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+    });
+
+    // Se cargan los tipos de red
+    this.typeNetworkService.getAllTypeNetworks().subscribe((response) &#x3D;&gt; {
+      this.typeNetworks &#x3D; response.data;
+    }, () &#x3D;&gt; {
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+    });
+
+    // Se cargan los tipos de localidad
+    this.typeTownService.getAllTypeTowns().subscribe((response) &#x3D;&gt; {
+      this.typeTowns &#x3D; response.data;
+    }, () &#x3D;&gt; {
+      // Mensaje de error cuando no se puede cargar, falta de conexion a internet
+      this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+    });
+
+    // En caso de llegar la informacion
+    if (data !&#x3D;&#x3D; null) {
+      this.project &#x3D; this.data;
+    } else {
+      this.project &#x3D; new Project();
+    }
+  }
+
+  /**
+   * Realiza el guardado de un proyecto
+   */
+  public saveProject(): void {
+    this.projectService.saveProject(this.project)
+      .subscribe((response) &#x3D;&gt; {
+        // Mostramos el mensaje de registro y cerramos el modal
+        this.toastr.success(response.data.message);
+        this.dialogRef.close(true);
+      }, (httpErrorResponse: HttpErrorResponse) &#x3D;&gt; {
+        // Validamos con los codigos de respuesta esperados en un error
+        if (httpErrorResponse.status &#x3D;&#x3D;&#x3D; AppConstants.HTTP_CODES.ERRORS.HTTP_BAD_REQUEST) {
+          this.toastr.error(httpErrorResponse.error.data.message);
+        } else {
+          this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
+        }
+      });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+  &lt;div class&#x3D;&quot;panel-heading&quot;&gt;Registro de Projectos&lt;/div&gt;
+  &lt;div class&#x3D;&quot;panel-body&quot;&gt;
+    &lt;form class&#x3D;&quot;form-group&quot;&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;input [(ngModel)]&#x3D;&quot;project.code&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;{{ &#x27;CODE&#x27; | translate }}&quot;
+          autocomplete&#x3D;&quot;off&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;input [(ngModel)]&#x3D;&quot;project.address&quot; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;{{ &#x27;ADDRESS&#x27; | translate }}&quot;
+          autocomplete&#x3D;&quot;off&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label [translate]&#x3D;&quot;&#x27;CIRCUIT&#x27;&quot;&gt;&lt;/label&gt;
+        &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;project.circuit.id&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+          &lt;option *ngFor&#x3D;&quot;let circuit of circuits&quot; [value]&#x3D;&quot;circuit.id&quot;&gt;{{ circuit.name }}&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label [translate]&#x3D;&quot;&#x27;CITY&#x27;&quot;&gt;&lt;/label&gt;
+        &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;project.city.id&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+          &lt;option *ngFor&#x3D;&quot;let city of cities&quot; [value]&#x3D;&quot;city.id&quot;&gt;{{ city.name }}&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label [translate]&#x3D;&quot;&#x27;ELECTRICAL_VOLTAGE_LEVEL&#x27;&quot;&gt;&lt;/label&gt;
+        &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;project.electricalVoltageLevel&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+          &lt;option [value]&#x3D;&quot;1&quot;&gt;1&lt;/option&gt;
+          &lt;option [value]&#x3D;&quot;2&quot;&gt;2&lt;/option&gt;
+          &lt;option [value]&#x3D;&quot;3&quot;&gt;3&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label [translate]&#x3D;&quot;&#x27;TYPE_NETWORK&#x27;&quot;&gt;&lt;/label&gt;
+        &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;project.typeNetwork.id&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+          &lt;option *ngFor&#x3D;&quot;let typeNetwork of typeNetworks&quot; [value]&#x3D;&quot;typeNetwork.id&quot;&gt;{{ typeNetwork.name }}&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label&gt;Localidad&lt;/label&gt;
+        &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;project.typeTown.id&quot; [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+          &lt;option *ngFor&#x3D;&quot;let typeTown of typeTowns&quot; [value]&#x3D;&quot;typeTown.id&quot;&gt;{{ typeTown.name }}&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+      &lt;button [disabled]&#x3D;&quot;(!project.code || !project.address || !project.circuit.id || !project.electricalVoltageLevel || !project.typeNetwork.id || !project.typeTown.id)&quot;
+        type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-success col-xs-12&quot; (click)&#x3D;&quot;saveProject()&quot;&gt;
+        &lt;span *ngIf&#x3D;&quot;!project.id&quot;&gt;{{ &#x27;REGISTER&#x27; | translate }}&lt;/span&gt;
+        &lt;span *ngIf&#x3D;&quot;project.id&quot;&gt;{{ &#x27;UPDATE&#x27; | translate }}&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./register-project-modal.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="panel panel-default">  <div class="panel-heading">Registro de Projectos</div>  <div class="panel-body">    <form class="form-group">      <div class="form-group">        <input [(ngModel)]="project.code" type="text" class="form-control" placeholder="{{ \'CODE\' | translate }}"          autocomplete="off" [ngModelOptions]="{standalone: true}">      </div>      <div class="form-group">        <input [(ngModel)]="project.address" type="text" class="form-control" placeholder="{{ \'ADDRESS\' | translate }}"          autocomplete="off" [ngModelOptions]="{standalone: true}">      </div>      <div class="form-group">        <label [translate]="\'CIRCUIT\'"></label>        <select class="form-control" [(ngModel)]="project.circuit.id" [ngModelOptions]="{standalone: true}">          <option *ngFor="let circuit of circuits" [value]="circuit.id">{{ circuit.name }}</option>        </select>      </div>      <div class="form-group">        <label [translate]="\'CITY\'"></label>        <select class="form-control" [(ngModel)]="project.city.id" [ngModelOptions]="{standalone: true}">          <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>        </select>      </div>      <div class="form-group">        <label [translate]="\'ELECTRICAL_VOLTAGE_LEVEL\'"></label>        <select class="form-control" [(ngModel)]="project.electricalVoltageLevel" [ngModelOptions]="{standalone: true}">          <option [value]="1">1</option>          <option [value]="2">2</option>          <option [value]="3">3</option>        </select>      </div>      <div class="form-group">        <label [translate]="\'TYPE_NETWORK\'"></label>        <select class="form-control" [(ngModel)]="project.typeNetwork.id" [ngModelOptions]="{standalone: true}">          <option *ngFor="let typeNetwork of typeNetworks" [value]="typeNetwork.id">{{ typeNetwork.name }}</option>        </select>      </div>      <div class="form-group">        <label>Localidad</label>        <select class="form-control" [(ngModel)]="project.typeTown.id" [ngModelOptions]="{standalone: true}">          <option *ngFor="let typeTown of typeTowns" [value]="typeTown.id">{{ typeTown.name }}</option>        </select>      </div>      <button [disabled]="(!project.code || !project.address || !project.circuit.id || !project.electricalVoltageLevel || !project.typeNetwork.id || !project.typeTown.id)"        type="button" class="btn btn-success col-xs-12" (click)="saveProject()">        <span *ngIf="!project.id">{{ \'REGISTER\' | translate }}</span>        <span *ngIf="project.id">{{ \'UPDATE\' | translate }}</span>      </button>    </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'CircuitsComponent', 'selector': 'app-circuits'},{'name': 'CitiesComponent', 'selector': 'app-cities'},{'name': 'ContractsComponent', 'selector': 'app-contracts'},{'name': 'EnterprisesComponent', 'selector': 'app-enterprises'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RegisterCircuitModalComponent', 'selector': 'app-register-circuit-modal'},{'name': 'RegisterCitiesModalComponent', 'selector': 'app-register-cities-modal'},{'name': 'RegisterContractModalComponent', 'selector': 'app-register-contract-modal'},{'name': 'RegisterEnterpriseModalComponent', 'selector': 'app-register-enterprise-modal'},{'name': 'RegisterProjectModalComponent', 'selector': 'app-register-project-modal'},{'name': 'RegisterSubstationModalComponent', 'selector': 'app-register-substation-modal'},{'name': 'RegisterUserModalComponent', 'selector': 'app-register-user-modal'},{'name': 'SubstationsComponent', 'selector': 'app-substations'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'RegisterProjectModalComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RegisterProjectModalComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
