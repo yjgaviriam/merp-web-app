@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsersComponent } from './users.component';
+import { UserService } from 'src/app/services/user.service';
+import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material';
 
 describe('UsersComponent', () => {
   let component: UsersComponent;
@@ -8,9 +13,18 @@ describe('UsersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsersComponent ]
+      declarations: [UsersComponent],
+      imports: [
+        SharedModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        ToastrModule.forRoot()
+      ],
+      providers: [
+        UserService
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +33,7 @@ describe('UsersComponent', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
