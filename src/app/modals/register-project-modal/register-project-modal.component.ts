@@ -4,15 +4,15 @@ import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
 import { Project } from 'src/app/entities/project';
-import { CircuitService } from 'src/app/servicies/circuits.service';
+import { CircuitService } from 'src/app/services/circuits.service';
 import { Circuit } from 'src/app/entities/circuit';
-import { ProjectService } from 'src/app/servicies/project.service';
-import { CityService } from 'src/app/servicies/city.service';
+import { ProjectService } from 'src/app/services/project.service';
+import { CityService } from 'src/app/services/city.service';
 import { City } from 'src/app/entities/city';
 import { TypeNetwork } from 'src/app/entities/type-network';
 import { TypeTown } from 'src/app/entities/type-town';
-import { TypeNetworkService } from 'src/app/servicies/type-network.service';
-import { TypeTownService } from 'src/app/servicies/type-town.service';
+import { TypeNetworkService } from 'src/app/services/type-network.service';
+import { TypeTownService } from 'src/app/services/type-town.service';
 
 /**
  * Modal para registrar un nuevo proyecto

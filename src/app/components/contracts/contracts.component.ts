@@ -4,7 +4,7 @@ import { AppConstants } from 'src/app/app-constants';
 import { MatDialog } from '@angular/material';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Contract } from 'src/app/entities/contract';
-import { ContractService } from 'src/app/servicies/contract.service';
+import { ContractService } from 'src/app/services/contract.service';
 import { RegisterContractModalComponent } from 'src/app/modals/register-contract-modal/register-contract-modal.component';
 
 /**
@@ -72,8 +72,6 @@ export class ContractsComponent implements OnInit {
    */
   public delete(contractId: number): void {
     this.contractService.deleteContract(contractId).subscribe((response) => {
-      // Mostramos el mensaje de registro y cerramos el modal
-      this.toastr.success(response.data.message);
       this.loadContracts();
     }, (httpErrorResponse: HttpErrorResponse) => {
       // Validamos con los codigos de respuesta esperados en un error

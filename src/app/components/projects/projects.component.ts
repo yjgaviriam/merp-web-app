@@ -3,11 +3,11 @@ import { ToastrService } from 'ngx-toastr';
 import { AppConstants } from 'src/app/app-constants';
 import { MatDialog } from '@angular/material';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ProjectService } from 'src/app/servicies/project.service';
+import { ProjectService } from 'src/app/services/project.service';
 import { RegisterProjectModalComponent } from 'src/app/modals/register-project-modal/register-project-modal.component';
 import { Project } from 'src/app/entities/project';
 import { User } from 'src/app/entities/user';
-import { UserService } from 'src/app/servicies/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 /**
  * Componente que contiene el listado de proyectos

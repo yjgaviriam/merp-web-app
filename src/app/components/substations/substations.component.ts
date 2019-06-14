@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SubstationService } from 'src/app/servicies/substation.service';
+import { SubstationService } from 'src/app/services/substation.service';
 import { ToastrService } from 'ngx-toastr';
 import { AppConstants } from 'src/app/app-constants';
 import { MatDialog } from '@angular/material';

@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { UserService } from 'src/app/servicies/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { AppConstants } from 'src/app/app-constants';
 import { ToastrService } from 'ngx-toastr';
 

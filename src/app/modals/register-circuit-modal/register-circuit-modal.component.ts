@@ -4,9 +4,9 @@ import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
 import { Circuit } from 'src/app/entities/circuit';
-import { CircuitService } from 'src/app/servicies/circuits.service';
+import { CircuitService } from 'src/app/services/circuits.service';
 import { Substation } from 'src/app/entities/substation';
-import { SubstationService } from 'src/app/servicies/substation.service';
+import { SubstationService } from 'src/app/services/substation.service';
 
 /**
  * Modal para registrar un nuevo circuito

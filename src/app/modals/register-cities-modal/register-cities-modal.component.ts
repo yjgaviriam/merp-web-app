@@ -2,9 +2,9 @@ import { Component, Inject } from '@angular/core';
 import { Department } from 'src/app/entities/department';
 import { City } from 'src/app/entities/city';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { CityService } from 'src/app/servicies/city.service';
+import { CityService } from 'src/app/services/city.service';
 import { ToastrService } from 'ngx-toastr';
-import { DepartmentService } from 'src/app/servicies/department.service';
+import { DepartmentService } from 'src/app/services/department.service';
 import { AppConstants } from 'src/app/app-constants';
 import { HttpErrorResponse } from '@angular/common/http';
 

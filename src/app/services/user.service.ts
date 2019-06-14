@@ -48,7 +48,7 @@ export class UserService {
   }
 
   public getStatusLogged(): User {
-    return JSON.parse(localStorage.getItem('__USER__'));
+    return JSON.parse(localStorage.getItem('__USER__')) || new User();
   }
 
   public getToken(): string {

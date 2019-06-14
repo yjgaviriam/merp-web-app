@@ -4,7 +4,7 @@ import { AppConstants } from 'src/app/app-constants';
 import { MatDialog } from '@angular/material';
 import { Circuit } from 'src/app/entities/circuit';
 import { HttpErrorResponse } from '@angular/common/http';
-import { CircuitService } from 'src/app/servicies/circuits.service';
+import { CircuitService } from 'src/app/services/circuits.service';
 import { RegisterCircuitModalComponent } from 'src/app/modals/register-circuit-modal/register-circuit-modal.component';
 
 /**

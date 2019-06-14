@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ToastrService } from 'ngx-toastr';
-import { SubstationService } from 'src/app/servicies/substation.service';
+import { SubstationService } from 'src/app/services/substation.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
 import { Substation } from 'src/app/entities/substation';

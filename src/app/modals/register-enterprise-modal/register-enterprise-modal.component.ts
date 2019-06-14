@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
 import { Enterprise } from 'src/app/entities/enterprise';
-import { EnterpriseService } from 'src/app/servicies/enterprise.service';
+import { EnterpriseService } from 'src/app/services/enterprise.service';
 
 /**
  * Modal para registrar una nueva empresa

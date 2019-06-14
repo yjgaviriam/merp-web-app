@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { UserService } from 'src/app/servicies/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ToastrService } from 'ngx-toastr';
 import { User } from 'src/app/entities/user';
@@ -7,8 +7,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
 import { Role } from 'src/app/entities/role';
 import { Enterprise } from 'src/app/entities/enterprise';
-import { RoleService } from 'src/app/servicies/role.service';
-import { EnterpriseService } from 'src/app/servicies/enterprise.service';
+import { RoleService } from 'src/app/services/role.service';
+import { EnterpriseService } from 'src/app/services/enterprise.service';
 
 /**
  * Modal para registrar un nuevo usuario

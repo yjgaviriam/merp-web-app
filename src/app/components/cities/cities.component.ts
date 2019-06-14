@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
 import { RegisterCitiesModalComponent } from 'src/app/modals/register-cities-modal/register-cities-modal.component';
-import { CityService } from 'src/app/servicies/city.service';
+import { CityService } from 'src/app/services/city.service';
 import { MatDialog } from '@angular/material';
 import { ToastrService } from 'ngx-toastr';
 import { City } from 'src/app/entities/city';

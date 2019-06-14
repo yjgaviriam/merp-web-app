@@ -4,8 +4,8 @@ import { Enterprise } from 'src/app/entities/enterprise';
 import { Contract } from 'src/app/entities/contract';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AppConstants } from 'src/app/app-constants';
-import { EnterpriseService } from 'src/app/servicies/enterprise.service';
-import { ContractService } from 'src/app/servicies/contract.service';
+import { EnterpriseService } from 'src/app/services/enterprise.service';
+import { ContractService } from 'src/app/services/contract.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

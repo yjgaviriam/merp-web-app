@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Enterprise } from 'src/app/entities/enterprise';
 import { RegisterEnterpriseModalComponent } from 'src/app/modals/register-enterprise-modal/register-enterprise-modal.component';
-import { EnterpriseService } from 'src/app/servicies/enterprise.service';
+import { EnterpriseService } from 'src/app/services/enterprise.service';
 
 /**
  * Componente que contiene el listado de empresas

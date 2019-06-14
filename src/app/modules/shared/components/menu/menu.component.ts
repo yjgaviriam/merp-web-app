@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AppConstants } from 'src/app/app-constants';
-import { UserService } from 'src/app/servicies/user.service';
+import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/entities/user';
 
 /**
