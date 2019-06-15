@@ -6,11 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule, MatDialogRef } from '@angular/material';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { SubstationService } from 'src/app/services/substation.service';
 import { CircuitService } from 'src/app/services/circuits.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ToastrModule } from 'ngx-toastr';
 
-describe('RegisterCircuitModalComponent', () => {
+fdescribe('RegisterCircuitModalComponent', () => {
   let component: RegisterCircuitModalComponent;
   let fixture: ComponentFixture<RegisterCircuitModalComponent>;
 
@@ -21,13 +23,18 @@ describe('RegisterCircuitModalComponent', () => {
         BrowserModule,
         FormsModule,
         CommonModule,
+        TranslateModule.forRoot(),
+        HttpClientTestingModule,
         BrowserAnimationsModule,
         MatDialogModule,
-        TranslateModule.forRoot()
+        ToastrModule.forRoot()
       ],
       providers: [
         CircuitService,
-        SubstationService
+        SubstationService,
+        {
+          provide: MatDialogRef
+        }
       ]
     })
       .compileComponents();

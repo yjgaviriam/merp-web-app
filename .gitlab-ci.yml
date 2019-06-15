@@ -7,6 +7,7 @@ stages:
 
 before_script:
   - npm install || true
+  - npm install -g @angular/cli
 
 cache:
   paths: 
@@ -15,7 +16,6 @@ cache:
 test:
   script: 
     - 'ng test'
-  coverage: '/^Statements\s*:\s*([^%]+)/'
   tags:
     - merp-web-runner
 

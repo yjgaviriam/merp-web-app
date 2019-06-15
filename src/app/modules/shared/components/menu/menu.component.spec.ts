@@ -6,14 +6,12 @@ import { UserService } from 'src/app/services/user.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService, TranslateStore, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
-import { User } from 'src/app/entities/user';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
 
   beforeEach(async(() => {
-    const user = new User();
     TestBed.configureTestingModule({
       declarations: [MenuComponent],
       imports: [
