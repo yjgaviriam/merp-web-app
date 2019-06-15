@@ -47,6 +47,9 @@ export class UserService {
     return this.httpClient.get<{ data: User[] }>(this.URL_API + 'v1/users/');
   }
 
+  /**
+   * Permite obtener la informacion del usuario logueado
+   */
   public getStatusLogged(): User {
     return JSON.parse(localStorage.getItem('__USER__')) || new User();
   }
