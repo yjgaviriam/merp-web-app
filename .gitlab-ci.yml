@@ -7,7 +7,6 @@ stages:
 
 before_script:
   - npm install || true
-  - npm install -g @angular/cli
 
 cache:
   paths: 
