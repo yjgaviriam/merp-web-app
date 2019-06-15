@@ -76,12 +76,8 @@ export class RegisterUserModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-    // En caso de llegar la informacion
-    if (data !== null) {
-      this.user = this.data;
-    } else {
-      this.user = new User();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.user = this.data || new User();
   }
 
   /**

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import { RegisterCircuitModalComponent } from './register-circuit-modal.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -12,7 +12,7 @@ import { CircuitService } from 'src/app/services/circuits.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ToastrModule } from 'ngx-toastr';
 
-fdescribe('RegisterCircuitModalComponent', () => {
+describe('RegisterCircuitModalComponent', () => {
   let component: RegisterCircuitModalComponent;
   let fixture: ComponentFixture<RegisterCircuitModalComponent>;
 
@@ -34,6 +34,9 @@ fdescribe('RegisterCircuitModalComponent', () => {
         SubstationService,
         {
           provide: MatDialogRef
+        },
+        {
+          provide: MAT_DIALOG_DATA
         }
       ]
     })

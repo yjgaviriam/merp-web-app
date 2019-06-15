@@ -48,12 +48,8 @@ export class RegisterContractModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-    // En caso de llegar la informacion
-    if (data !== null) {
-      this.contract = this.data;
-    } else {
-      this.contract = new Contract();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.contract = this.data || new Contract();
   }
 
   /**

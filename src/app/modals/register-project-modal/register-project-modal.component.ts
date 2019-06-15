@@ -105,13 +105,8 @@ export class RegisterProjectModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-
-    // En caso de llegar la informacion
-    if (data !== null) {
-      this.project = this.data;
-    } else {
-      this.project = new Project();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.project = this.data || new Project();
   }
 
   /**

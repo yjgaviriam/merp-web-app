@@ -39,12 +39,8 @@ export class RegisterEnterpriseModalComponent {
     private enterpriseService: EnterpriseService,
     private toastr: ToastrService
   ) {
-    // En caso de llegar la informacion
-    if (data !== null) {
-      this.enterprise = this.data;
-    } else {
-      this.enterprise = new Enterprise();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.enterprise = this.data || new Enterprise();
   }
 
   /**

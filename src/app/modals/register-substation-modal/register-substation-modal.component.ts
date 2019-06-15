@@ -38,12 +38,8 @@ export class RegisterSubstationModalComponent {
     private substationService: SubstationService,
     private toastr: ToastrService
   ) {
-    // En caso de llegar la informacion
-    if (data !== null) {
-      this.substation = this.data;
-    } else {
-      this.substation = new Substation();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.substation = this.data || new Substation();
   }
 
   /**
