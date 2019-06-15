@@ -304,8 +304,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">src/app/modals/register-substation-modal/register-substation-modal.component.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/modals/register-substation-modal/register-substation-modal.component.ts:48</a></div>
                 </td>
             </tr>
 
@@ -372,7 +372,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject } from &#x27;@angular/core&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
 import { ToastrService } from &#x27;ngx-toastr&#x27;;
-import { SubstationService } from &#x27;src/app/servicies/substation.service&#x27;;
+import { SubstationService } from &#x27;src/app/services/substation.service&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { Substation } from &#x27;src/app/entities/substation&#x27;;
@@ -409,12 +409,8 @@ export class RegisterSubstationModalComponent {
     private substationService: SubstationService,
     private toastr: ToastrService
   ) {
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.substation &#x3D; this.data;
-    } else {
-      this.substation &#x3D; new Substation();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.substation &#x3D; this.data || new Substation();
   }
 
   /**

@@ -324,8 +324,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/app/modals/register-circuit-modal/register-circuit-modal.component.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/modals/register-circuit-modal/register-circuit-modal.component.ts:64</a></div>
                 </td>
             </tr>
 
@@ -429,9 +429,9 @@ import { ToastrService } from &#x27;ngx-toastr&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { Circuit } from &#x27;src/app/entities/circuit&#x27;;
-import { CircuitService } from &#x27;src/app/servicies/circuits.service&#x27;;
+import { CircuitService } from &#x27;src/app/services/circuits.service&#x27;;
 import { Substation } from &#x27;src/app/entities/substation&#x27;;
-import { SubstationService } from &#x27;src/app/servicies/substation.service&#x27;;
+import { SubstationService } from &#x27;src/app/services/substation.service&#x27;;
 
 /**
  * Modal para registrar un nuevo circuito
@@ -479,12 +479,8 @@ export class RegisterCircuitModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.circuit &#x3D; this.data;
-    } else {
-      this.circuit &#x3D; new Circuit();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.circuit &#x3D; this.data || new Circuit();
   }
 
   /**

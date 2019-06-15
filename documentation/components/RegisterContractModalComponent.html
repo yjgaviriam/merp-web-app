@@ -312,8 +312,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/app/modals/register-contract-modal/register-contract-modal.component.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/modals/register-contract-modal/register-contract-modal.component.ts:58</a></div>
                 </td>
             </tr>
 
@@ -417,8 +417,8 @@ import { Enterprise } from &#x27;src/app/entities/enterprise&#x27;;
 import { Contract } from &#x27;src/app/entities/contract&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
-import { EnterpriseService } from &#x27;src/app/servicies/enterprise.service&#x27;;
-import { ContractService } from &#x27;src/app/servicies/contract.service&#x27;;
+import { EnterpriseService } from &#x27;src/app/services/enterprise.service&#x27;;
+import { ContractService } from &#x27;src/app/services/contract.service&#x27;;
 import { ToastrService } from &#x27;ngx-toastr&#x27;;
 
 @Component({
@@ -461,12 +461,8 @@ export class RegisterContractModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.contract &#x3D; this.data;
-    } else {
-      this.contract &#x3D; new Contract();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.contract &#x3D; this.data || new Contract();
   }
 
   /**

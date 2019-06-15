@@ -348,8 +348,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="90"
-                            class="link-to-prism">src/app/modals/register-user-modal/register-user-modal.component.ts:90</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/modals/register-user-modal/register-user-modal.component.ts:86</a></div>
                 </td>
             </tr>
 
@@ -516,7 +516,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject } from &#x27;@angular/core&#x27;;
-import { UserService } from &#x27;src/app/servicies/user.service&#x27;;
+import { UserService } from &#x27;src/app/services/user.service&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
 import { ToastrService } from &#x27;ngx-toastr&#x27;;
 import { User } from &#x27;src/app/entities/user&#x27;;
@@ -524,8 +524,8 @@ import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { Role } from &#x27;src/app/entities/role&#x27;;
 import { Enterprise } from &#x27;src/app/entities/enterprise&#x27;;
-import { RoleService } from &#x27;src/app/servicies/role.service&#x27;;
-import { EnterpriseService } from &#x27;src/app/servicies/enterprise.service&#x27;;
+import { RoleService } from &#x27;src/app/services/role.service&#x27;;
+import { EnterpriseService } from &#x27;src/app/services/enterprise.service&#x27;;
 
 /**
  * Modal para registrar un nuevo usuario
@@ -593,12 +593,8 @@ export class RegisterUserModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.user &#x3D; this.data;
-    } else {
-      this.user &#x3D; new User();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.user &#x3D; this.data || new User();
   }
 
   /**

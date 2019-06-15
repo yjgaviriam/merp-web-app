@@ -384,8 +384,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="120"
-                            class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:120</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/modals/register-project-modal/register-project-modal.component.ts:115</a></div>
                 </td>
             </tr>
 
@@ -591,15 +591,15 @@ import { ToastrService } from &#x27;ngx-toastr&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { Project } from &#x27;src/app/entities/project&#x27;;
-import { CircuitService } from &#x27;src/app/servicies/circuits.service&#x27;;
+import { CircuitService } from &#x27;src/app/services/circuits.service&#x27;;
 import { Circuit } from &#x27;src/app/entities/circuit&#x27;;
-import { ProjectService } from &#x27;src/app/servicies/project.service&#x27;;
-import { CityService } from &#x27;src/app/servicies/city.service&#x27;;
+import { ProjectService } from &#x27;src/app/services/project.service&#x27;;
+import { CityService } from &#x27;src/app/services/city.service&#x27;;
 import { City } from &#x27;src/app/entities/city&#x27;;
 import { TypeNetwork } from &#x27;src/app/entities/type-network&#x27;;
 import { TypeTown } from &#x27;src/app/entities/type-town&#x27;;
-import { TypeNetworkService } from &#x27;src/app/servicies/type-network.service&#x27;;
-import { TypeTownService } from &#x27;src/app/servicies/type-town.service&#x27;;
+import { TypeNetworkService } from &#x27;src/app/services/type-network.service&#x27;;
+import { TypeTownService } from &#x27;src/app/services/type-town.service&#x27;;
 
 /**
  * Modal para registrar un nuevo proyecto
@@ -692,13 +692,8 @@ export class RegisterProjectModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.project &#x3D; this.data;
-    } else {
-      this.project &#x3D; new Project();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.project &#x3D; this.data || new Project();
   }
 
   /**

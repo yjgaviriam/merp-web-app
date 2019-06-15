@@ -304,8 +304,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/app/modals/register-enterprise-modal/register-enterprise-modal.component.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/modals/register-enterprise-modal/register-enterprise-modal.component.ts:49</a></div>
                 </td>
             </tr>
 
@@ -375,7 +375,7 @@ import { ToastrService } from &#x27;ngx-toastr&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { Enterprise } from &#x27;src/app/entities/enterprise&#x27;;
-import { EnterpriseService } from &#x27;src/app/servicies/enterprise.service&#x27;;
+import { EnterpriseService } from &#x27;src/app/services/enterprise.service&#x27;;
 
 /**
  * Modal para registrar una nueva empresa
@@ -410,12 +410,8 @@ export class RegisterEnterpriseModalComponent {
     private enterpriseService: EnterpriseService,
     private toastr: ToastrService
   ) {
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.enterprise &#x3D; this.data;
-    } else {
-      this.enterprise &#x3D; new Enterprise();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.enterprise &#x3D; this.data || new Enterprise();
   }
 
   /**

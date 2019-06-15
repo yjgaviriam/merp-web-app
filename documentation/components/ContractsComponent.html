@@ -432,8 +432,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="91"
-                            class="link-to-prism">src/app/components/contracts/contracts.component.ts:91</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/components/contracts/contracts.component.ts:89</a></div>
                 </td>
             </tr>
 
@@ -516,8 +516,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="105"
-                            class="link-to-prism">src/app/components/contracts/contracts.component.ts:105</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/app/components/contracts/contracts.component.ts:103</a></div>
                 </td>
             </tr>
 
@@ -623,7 +623,7 @@ import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { MatDialog } from &#x27;@angular/material&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 import { Contract } from &#x27;src/app/entities/contract&#x27;;
-import { ContractService } from &#x27;src/app/servicies/contract.service&#x27;;
+import { ContractService } from &#x27;src/app/services/contract.service&#x27;;
 import { RegisterContractModalComponent } from &#x27;src/app/modals/register-contract-modal/register-contract-modal.component&#x27;;
 
 /**
@@ -691,8 +691,6 @@ export class ContractsComponent implements OnInit {
    */
   public delete(contractId: number): void {
     this.contractService.deleteContract(contractId).subscribe((response) &#x3D;&gt; {
-      // Mostramos el mensaje de registro y cerramos el modal
-      this.toastr.success(response.data.message);
       this.loadContracts();
     }, (httpErrorResponse: HttpErrorResponse) &#x3D;&gt; {
       // Validamos con los codigos de respuesta esperados en un error

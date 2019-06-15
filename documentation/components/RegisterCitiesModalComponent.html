@@ -324,8 +324,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/app/modals/register-cities-modal/register-cities-modal.component.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/modals/register-cities-modal/register-cities-modal.component.ts:64</a></div>
                 </td>
             </tr>
 
@@ -427,9 +427,9 @@
 import { Department } from &#x27;src/app/entities/department&#x27;;
 import { City } from &#x27;src/app/entities/city&#x27;;
 import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
-import { CityService } from &#x27;src/app/servicies/city.service&#x27;;
+import { CityService } from &#x27;src/app/services/city.service&#x27;;
 import { ToastrService } from &#x27;ngx-toastr&#x27;;
-import { DepartmentService } from &#x27;src/app/servicies/department.service&#x27;;
+import { DepartmentService } from &#x27;src/app/services/department.service&#x27;;
 import { AppConstants } from &#x27;src/app/app-constants&#x27;;
 import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 
@@ -479,12 +479,8 @@ export class RegisterCitiesModalComponent {
       // Mensaje de error cuando no se puede cargar, falta de conexion a internet
       this.toastr.error(AppConstants.MESSAGES.ERROR.HTTP_GENERAL_MESSAGE);
     });
-    // En caso de llegar la informacion
-    if (data !&#x3D;&#x3D; null) {
-      this.city &#x3D; this.data;
-    } else {
-      this.city &#x3D; new City();
-    }
+    // Se asigna la informacion en caso de llegar la informacion o se crea una nueva instancia
+    this.city &#x3D; this.data || new City();
   }
 
   /**
