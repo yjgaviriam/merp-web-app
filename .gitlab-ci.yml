@@ -21,11 +21,11 @@ test:
       --progress=false'
   coverage: '/^Statements\s*:\s*([^%]+)/'
   tags:
-    - chrome
+    - merp-web-runner
 
 e2e: 
   script:
     - 'ng e2e
       --progress=false' 
   tags:
-    - chrome
+    - merp-web-runner
