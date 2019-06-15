@@ -10,7 +10,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material';
 import { SubstationService } from 'src/app/services/substation.service';
 import { CircuitService } from 'src/app/services/circuits.service';
 
-fdescribe('RegisterCircuitModalComponent', () => {
+describe('RegisterCircuitModalComponent', () => {
   let component: RegisterCircuitModalComponent;
   let fixture: ComponentFixture<RegisterCircuitModalComponent>;
 

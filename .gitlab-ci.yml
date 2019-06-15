@@ -1,4 +1,4 @@
-image: node:8.9.0
+image: node:10.16
 
 stages:
   - test
@@ -14,20 +14,14 @@ cache:
 
 test:
   script: 
-    - 'ng test
-      --code-coverage 
-      --reporters=coverage-istanbul,progress 
-      --print summary 
-      --single-run 
-      --progress=false'
+    - 'ng test'
   coverage: '/^Statements\s*:\s*([^%]+)/'
   tags:
     - merp-web-runner
 
 e2e: 
   script:
-    - 'ng e2e
-      --progress=false' 
+    - 'ng e2e' 
   tags:
     - merp-web-runner
 
