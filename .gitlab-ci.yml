@@ -1,36 +1,40 @@
 image: trion/ng-cli-karma
 
+# Estados por los cuales debe pasar el CI
 stages:
   - test
   - e2e
   - deploy
 
+# Se instala las dependencias necesarias
 before_script:
-  # - apt install chromium-bsu
-  # - apt list --installed
-  # - ls -1 /usr/bin
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
   - npm install || true
 
+# Utilizamos la cache para no instalar de nuevo depencias 
 cache:
   paths: 
     - node_modules/
-    - /usr/bin/chromium-browser
 
+# Se realizan las pruebas unitarias
 test:
   script: 
     - 'ng test --watch=false'
   tags:
     - merp-web-runner
 
+# Se realizan pruebas e2e
 e2e: 
   script:
     - 'ng e2e' 
   tags:
     - merp-web-runner
 
-deployToAWS:
+# Se inicia el estado de despliegue
+deploy:
   only:
     - master
-  stage: deploy
   script:
+    - eval $(ssh-agent -s)
+    - echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - bash ./deploy-production.sh
