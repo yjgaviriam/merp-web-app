@@ -7,7 +7,7 @@ stages:
 
 before_script:
   - apt-get upgrade
-  - sudo apt install chromium 
+  - apt install chromium-bsu
   - apt list --installed
   - ls -1 /usr/bin
   - npm install || true
