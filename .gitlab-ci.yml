@@ -6,7 +6,7 @@ stages:
   - deploy
 
 before_script:
-  - apt-show-versions
+  - apt-get upgrade
   - sudo apt-get install chromium-browser
   - ls -1 /usr/bin
   - npm install || true
