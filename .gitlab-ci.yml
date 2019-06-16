@@ -6,7 +6,7 @@ stages:
   - deploy
 
 before_script:
-  - apt install --assume-yes chromium-browser
+  - apt-get install chromium-browser
   - ls -1 /usr/bin
   - npm install || true
   - npm install -g @angular/cli
@@ -14,6 +14,7 @@ before_script:
 cache:
   paths: 
     - node_modules/
+    - /usr/bin/chromium-browser
 
 test:
   script: 
