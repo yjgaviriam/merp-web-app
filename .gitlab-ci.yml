@@ -2,11 +2,10 @@ image: trion/ng-cli-karma
 
 stages:
   - test
-  # - e2e
+  - e2e
   - deploy
 
 before_script:
-  - apt-get upgrade
   # - apt install chromium-bsu
   # - apt list --installed
   # - ls -1 /usr/bin
@@ -23,11 +22,11 @@ test:
   tags:
     - merp-web-runner
 
-# e2e: 
-#   script:
-#     - 'ng e2e' 
-#   tags:
-#     - merp-web-runner
+e2e: 
+  script:
+    - 'ng e2e' 
+  tags:
+    - merp-web-runner
 
 deployToAWS:
   only:
