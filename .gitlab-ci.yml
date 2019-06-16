@@ -7,6 +7,7 @@ stages:
 
 before_script:
   - apt-get upgrade
+  - apt list --installed
   - apt-get install chromium-browser
   - ls -1 /usr/bin
   - npm install || true
