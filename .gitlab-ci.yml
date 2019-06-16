@@ -6,6 +6,7 @@ stages:
   - deploy
 
 before_script:
+  - apt-get install chromium-browser
   - ls -1 /usr/bin
   - npm install || true
   - npm install -g @angular/cli
