@@ -6,6 +6,7 @@ stages:
   - deploy
 
 before_script:
+  - echo "ls /usr/bin/"
   - npm install || true
   - npm install -g @angular/cli
 
