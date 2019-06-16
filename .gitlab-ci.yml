@@ -6,6 +6,7 @@ stages:
   - deploy
 
 before_script:
+  - echo $CHROME_BIN
   - npm install || true
   - npm install -g @angular/cli
 
