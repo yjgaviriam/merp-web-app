@@ -2,11 +2,10 @@ image: node:10.16
 
 stages:
   - test
-  - e2e
+  # - e2e
   - deploy
 
 before_script:
-  - echo "Valor de la varibale $CHROME_BIN"
   - npm install || true
   - npm install -g @angular/cli
 
@@ -16,15 +15,15 @@ cache:
 
 test:
   script: 
-    - 'ng test'
+    - 'ng test --watch=false'
   tags:
     - merp-web-runner
 
-e2e: 
-  script:
-    - 'ng e2e' 
-  tags:
-    - merp-web-runner
+# e2e: 
+#   script:
+#     - 'ng e2e' 
+#   tags:
+#     - merp-web-runner
 
 deployToAWS:
   only:
