@@ -6,9 +6,6 @@ stages:
   - e2e
   - deploy
 
-# Utilizamos la cache para no instalar de nuevo depencias 
-
-
 # Se realizan las pruebas unitarias
 test:
   cache:
