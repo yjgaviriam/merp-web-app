@@ -6,11 +6,6 @@ stages:
   - e2e
   - deploy
 
-# Se instala las dependencias necesarias
-before_script:
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-  - npm install || true
-
 # Utilizamos la cache para no instalar de nuevo depencias 
 cache:
   paths: 
@@ -19,6 +14,7 @@ cache:
 # Se realizan las pruebas unitarias
 test:
   script: 
+    - npm install || true
     - 'ng test --watch=false'
   tags:
     - merp-web-runner
@@ -26,6 +22,7 @@ test:
 # Se realizan pruebas e2e
 e2e: 
   script:
+    - npm install || true
     - 'ng e2e' 
   tags:
     - merp-web-runner
@@ -35,4 +32,5 @@ deploy:
   only:
     - master
   script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - bash ./deploy/deploy-production.sh
