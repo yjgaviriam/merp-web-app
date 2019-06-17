@@ -35,4 +35,4 @@ deploy:
   only:
     - master
   script:
-    - bash ./deploy-production.sh
+    - bash ./deploy/deploy-production.sh
