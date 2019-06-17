@@ -18,5 +18,5 @@ DEPLOY_SERVER=$DEPLOY_SERVER
 
 SSH_PRIVATE_KEY=$SSH_PRIVATE_KEY
 
-echo "deploying to ${DEPLOY_SERVER}"
+echo "deploying to ${DEPLOY_SERVER} with ${SSH_PRIVATE_KEY}"
 ssh -i ${SSH_PRIVATE_KEY} ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
