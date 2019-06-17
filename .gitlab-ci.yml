@@ -15,19 +15,15 @@ cache:
 
 # Se realizan las pruebas unitarias
 test:
-
   script: 
     # - npm install || true
     # - 'ng test --watch=false'
-    - echo "Pass"
+    - echo "PASS"
   tags:
     - merp-web-runner
 
 # Se realizan pruebas e2e
 # e2e:
-#   cache:
-#     paths:
-#       - node_modules/
 #   script:
 #     - npm install || true
 #     - 'ng e2e'
@@ -46,7 +42,7 @@ deploy:
     - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - ng build --prod
-    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" 'bash -s' < ./deploy/restart-server-production.sh
+    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" "cp -a ./dist/merp-web-app/. /var/www/html/"
   script:
     - bash .gitlab-deploy.sh   
   environment:     
