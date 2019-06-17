@@ -2,9 +2,9 @@ image: trion/ng-cli-karma
 
 # Estados por los cuales debe pasar el CI
 stages:
+  - test
   # - e2e
   - deploy
-  - test
 
 # Se realizan las pruebas unitarias
 test:
