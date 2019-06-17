@@ -6,11 +6,16 @@ stages:
   # - e2e
   - deploy
 
+before_script:
+  - npm install || true
+
+cache:
+  paths: 
+    - node_modules/
+
 # Se realizan las pruebas unitarias
 test:
-  # cache:
-  #   paths: 
-  #     - node_modules/
+
   script: 
     # - npm install || true
     # - 'ng test --watch=false'
@@ -36,13 +41,12 @@ deploy:
   before_script:
     - "which ssh-agent || ( apk add --update openssh )"
     - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY"
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - ng build --prod
-    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" 'bash -s' < ./deploy/restart-server-production.sh
+    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" "mkdir /var/www/test"
   script:
     - bash .gitlab-deploy.sh   
   environment:     
