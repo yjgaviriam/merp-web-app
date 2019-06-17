@@ -36,3 +36,5 @@ deploy:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
   script:
     - bash ./deploy/deploy-production.sh
+  tags:
+    - merp-web-runner
