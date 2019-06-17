@@ -6,6 +6,7 @@ set -e
 SSH_PRIVATE_KEY=$SSH_PRIVATE_KEY
 touch ./ubuntu_key.pem
 echo -e "${SSH_PRIVATE_KEY}" >> ./ubuntu_key.pem
+chmod 400 ./ubuntu_key.pem
 
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
