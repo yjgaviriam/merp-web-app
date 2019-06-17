@@ -17,6 +17,8 @@ bash ./deploy/disable-host-key-checking.sh
 DEPLOY_SERVER=$DEPLOY_SERVER
 
 SSH_PRIVATE_KEY=$SSH_PRIVATE_KEY
+touch ~/ubuntu_key.pem
+echo -e "${SSH_PRIVATE_KEY}" >> ~/ubuntu_key.pem
 
 echo "deploying to ${DEPLOY_SERVER} with ${SSH_PRIVATE_KEY}"
-ssh -i ${SSH_PRIVATE_KEY} ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
+ssh -i "ubuntu_key.pem" ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
