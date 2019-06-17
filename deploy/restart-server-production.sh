@@ -3,6 +3,7 @@
 # any future command that fails will exit the script
 echo "Comenzando desde EC2"
 set -e
+ls
 
 # go to folder of repository
 cd /home/ubuntu/merp-web-app/
