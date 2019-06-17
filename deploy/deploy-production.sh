@@ -3,14 +3,14 @@
 # any future command that fails will exit the script
 set -e
 
-SSH_PRIVATE_KEY=$SSH_PRIVATE_KEY
-touch ./ubuntu_key.pem
-echo -e "${SSH_PRIVATE_KEY}" >> ./ubuntu_key.pem
-chmod 400 ./ubuntu_key.pem
+# SSH_PRIVATE_KEY=$SSH_PRIVATE_KEY
+# touch ./ubuntu_key.pem
+# echo -e "${SSH_PRIVATE_KEY}" >> ./ubuntu_key.pem
+# chmod 400 ./ubuntu_key.pem
 
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
-ssh-keyscan -t rsa ${DEPLOY_SERVER} >> ~/.ssh/known_hosts
+# ssh-keyscan -t rsa ${DEPLOY_SERVER} >> ~/.ssh/known_hosts
 ssh-add <(echo -e "$SSH_PRIVATE_KEY")
 
 # ** Alternative approach
