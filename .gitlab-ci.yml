@@ -3,7 +3,7 @@ image: trion/ng-cli-karma
 # Estados por los cuales debe pasar el CI
 stages:
   - test
-  # - e2e
+  - e2e
   - deploy
 
 before_script:
@@ -16,19 +16,18 @@ cache:
 # Se realizan las pruebas unitarias
 test:
   script: 
-    # - npm install || true
-    # - 'ng test --watch=false'
-    - echo "PASS"
+    - npm install || true
+    - 'ng test --watch=false'
   tags:
     - merp-web-runner
 
 # Se realizan pruebas e2e
-# e2e:
-#   script:
-#     - npm install || true
-#     - 'ng e2e'
-#   tags:
-#     - merp-web-runner
+e2e:
+  script:
+    - npm install || true
+    - 'ng e2e'
+  tags:
+    - merp-web-runner
 
 # Se inicia el estado de despliegue
 deploy:
@@ -41,8 +40,7 @@ deploy:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - ng build --prod
-    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" "cp -a ./dist/merp-web-app/. /var/www/html/"
+    # - ng build --prod
   script:
     - bash .gitlab-deploy.sh   
   environment:     

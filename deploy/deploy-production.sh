@@ -2,28 +2,22 @@
 
 # any future command that fails will exit the script
 set -e
+echo "Running on EC2"
 
-# SSH_PRIVATE_KEY=$SSH_PRIVATE_KEY
-# touch ./ubuntu_key.pem
-# echo -e "${SSH_PRIVATE_KEY}" >> ./ubuntu_key.pem
-# chmod 400 ./ubuntu_key.pem
+# go to folder of repository
+cd /home/ubuntu/merp-web-app/
 
-# Lets write the public key of our aws instance
-eval $(ssh-agent -s)
-# ssh-keyscan -t rsa ${DEPLOY_SERVER} >> ~/.ssh/known_hosts
-ssh-add <(echo "$SSH_PRIVATE_KEY")
+# pulling the repo again
+git pull https://$USER_SERVER:$USER_SERVER_PASSWORD@gitlab.com/yjgaviriam/merp-web-app.git
 
-# ** Alternative approach
-# echo -e "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
-# chmod 600 /root/.ssh/id_rsa
-# ** End of alternative approach
+# installing npm packages
+echo "Running npm install"
+npm install
 
-# disable the host key checking.
-bash ./deploy/disable-host-key-checking.sh
+# building application
+echo "Build application"
+ng build --prod
 
-DEPLOY_SERVER=$DEPLOY_SERVER
-
-echo "a ----------------------------------------------"
-
-echo "deploying to ${DEPLOY_SERVER}"
-ssh ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
+# copy the application to folder www
+echo "Deploy application"
+sudo cp -a ./dist/merp-web-app/. /var/www/html/

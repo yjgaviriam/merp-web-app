@@ -6,10 +6,9 @@ echo "Running on EC2"
 
 # go to folder of repository
 cd /home/ubuntu/merp-web-app/
-echo "Valor del usuario $USER pass $USER_PASSWORD"
 
 # pulling the repo again
-git pull https://yjgaviriam:ABCcba123@gitlab.com/yjgaviriam/merp-web-app.git
+git pull https://$USER_SERVER:$USER_SERVER_PASSWORD@gitlab.com/yjgaviriam/merp-web-app.git
 
 # installing npm packages
 echo "Running npm install"
