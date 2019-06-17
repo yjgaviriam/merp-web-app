@@ -116,7 +116,7 @@ export class RegisterProjectModalComponent {
     this.projectService.saveProject(this.project)
       .subscribe((response) => {
         // Mostramos el mensaje de registro y cerramos el modal
-        this.toastr.success(response.data.message);
+        this.toastr.info(response.data.message, null, { timeOut: AppConstants.TIME_OUT_TOAST_LARGE });
         this.dialogRef.close(true);
       }, (httpErrorResponse: HttpErrorResponse) => {
         // Validamos con los codigos de respuesta esperados en un error
