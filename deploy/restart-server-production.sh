@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # any future command that fails will exit the script
-echo "Comenzando desde EC2"
 set -e
-ls
+echo "Running on EC2"
 
 # go to folder of repository
 cd /home/ubuntu/merp-web-app/
+ls
 
 # pulling the repo again
-git pull origin master https://$USER:$USER_PASSWORD@gitlab.com/yjgaviriam/merp-web-app.git
+git pull origin master https://yjgaviriam:ABCcba123@gitlab.com/yjgaviriam/merp-web-app.git
 
 # installing npm packages
 echo "Running npm install"
