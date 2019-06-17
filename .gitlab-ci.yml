@@ -3,7 +3,7 @@ image: trion/ng-cli-karma
 # Estados por los cuales debe pasar el CI
 stages:
   - test
-  - e2e
+  # - e2e
   - deploy
 
 before_script:
@@ -22,12 +22,12 @@ test:
     - merp-web-runner
 
 # Se realizan pruebas e2e
-e2e:
-  script:
-    - npm install || true
-    - 'ng e2e'
-  tags:
-    - merp-web-runner
+# e2e:
+#   script:
+#     - npm install || true
+#     - 'ng e2e'
+#   tags:
+#     - merp-web-runner
 
 # Se inicia el estado de despliegue
 deploy:
