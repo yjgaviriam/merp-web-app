@@ -11,7 +11,7 @@ set -e
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
 # ssh-keyscan -t rsa ${DEPLOY_SERVER} >> ~/.ssh/known_hosts
-ssh-add <(echo -e "$SSH_PRIVATE_KEY")
+ssh-add <(echo "$SSH_PRIVATE_KEY")
 
 # ** Alternative approach
 # echo -e "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
