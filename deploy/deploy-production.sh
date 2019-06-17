@@ -18,5 +18,5 @@ bash ./deploy/disable-host-key-checking.sh
 # comma seperated values of ip addresses.
 DEPLOY_SERVER=$DEPLOY_SERVER
 
-echo "deploying ${DEPLOY_SERVER}"
+echo "deploying to ${DEPLOY_SERVER}"
 ssh ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
