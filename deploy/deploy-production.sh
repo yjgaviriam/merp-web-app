@@ -4,7 +4,8 @@
 set -e
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
-echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null
+echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+ls
 
 # ** Alternative approach
 # echo -e "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
