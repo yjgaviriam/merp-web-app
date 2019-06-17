@@ -8,8 +8,6 @@ set -e
 # echo -e "${SSH_PRIVATE_KEY}" >> ./ubuntu_key.pem
 # chmod 400 ./ubuntu_key.pem
 
-ls /var/www/
-
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
 # ssh-keyscan -t rsa ${DEPLOY_SERVER} >> ~/.ssh/known_hosts
