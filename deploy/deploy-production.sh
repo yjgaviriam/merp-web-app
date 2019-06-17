@@ -12,7 +12,7 @@ echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
 # ** End of alternative approach
 
 # disable the host key checking.
-./deploy/disable-host-key-checking.sh
+bash ./deploy/disable-host-key-checking.sh
 
 # Se ingresa al servidor
 echo "deploying to $SERVER"
