@@ -42,6 +42,8 @@ deploy:
     - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER"
+  script:
+    - npm i -g pm2 
   # script:
   #   - bash .gitlab-deploy.sh   
   # environment:     
