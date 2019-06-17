@@ -34,15 +34,18 @@ deploy:
   only:
     - master
   before_script:
-    - mkdir -p ~/.ssh     
-    - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa     
-    - chmod 600 ~/.ssh/id_rsa     
+    - "which ssh-agent || ( apk add --update openssh )"
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY"
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
-  script:
-    - bash .gitlab-deploy.sh   
-  environment:     
-    name: production     
-    url: https://3.13.185.75
+    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER"
+  # script:
+  #   - bash .gitlab-deploy.sh   
+  # environment:     
+  #   name: production     
+  #   url: https://3.13.185.75
   tags:
     - merp-web-runner
