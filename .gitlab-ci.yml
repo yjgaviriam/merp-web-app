@@ -34,14 +34,12 @@ deploy:
   only:
     - master
   before_script:
-    - mkdir -p ~/.ssh     
-    - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa     
-    - chmod 600 ~/.ssh/id_rsa     
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - mkdir -p ~/.ssh
+    - echo -n "$SSH_PRIVATE_KEY" | ssh-add - >/dev/null
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
-    - bash .gitlab-deploy.sh   
-  environment:     
-    name: production     
-    url: https://3.13.185.75
+    - bash ./deploy/deploy-production.sh
   tags:
     - merp-web-runner
