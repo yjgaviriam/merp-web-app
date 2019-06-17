@@ -2,4 +2,4 @@
 
 #Get servers list
 set -f
-ssh ubuntu@${DEPLOY_SERVER} "ls /var/www"
+ssh ubuntu@$DEPLOY_SERVER "ls /var/www"
