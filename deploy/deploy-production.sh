@@ -25,4 +25,4 @@ DEPLOY_SERVER=$DEPLOY_SERVER
 
 
 echo "deploying to ${DEPLOY_SERVER}"
-ssh -i "ubuntu_key.pem" ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
+ssh ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
