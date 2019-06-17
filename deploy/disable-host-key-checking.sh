@@ -12,6 +12,7 @@
 #
 
 # any future command that fails will exit the script
+echo "Iniciando ---------------------------------"
 set -e
 mkdir -p ~/.ssh
 touch ~/.ssh/config
