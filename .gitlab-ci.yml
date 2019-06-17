@@ -21,13 +21,13 @@ test:
     - merp-web-runner
 
 # Se realizan pruebas e2e
-e2e: 
+e2e:
   cache:
-    paths: 
+    paths:
       - node_modules/
   script:
     - npm install || true
-    - 'ng e2e' 
+    - 'ng e2e'
   tags:
     - merp-web-runner
 
@@ -35,14 +35,13 @@ e2e:
 deploy:
   only:
     - master
-  before_script: 
-     - mkdir -p ~/.ssh     
-     - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa     
-     - chmod 600 ~/.ssh/id_rsa     
-     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'  
+  before_script:
+     - mkdir -p ~/.ssh
+     - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+     - chmod 600 ~/.ssh/id_rsa
+     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
     - bash .gitlab-deploy.sh
-  environment:     
-    name: production     
-    url: http://3.13.185.75  
-  when: manual
+  environment:
+    name: production
+    url: http://3.13.185.75
