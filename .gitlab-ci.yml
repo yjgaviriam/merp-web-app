@@ -41,7 +41,7 @@ deploy:
      - chmod 600 ~/.ssh/id_rsa     
      - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'  
   script:
-    - bash ./deploy/deploy-production.sh
+    - bash .gitlab-deploy.sh
   environment:     
     name: production     
     url: http://3.13.185.75  
