@@ -6,7 +6,7 @@ echo "Running on EC2"
 
 # go to folder of repository
 cd /home/ubuntu/merp-web-app/
-ls
+echo "Valor del usuario $USER pass $USER_PASSWORD"
 
 # pulling the repo again
 git pull https://yjgaviriam:ABCcba123@gitlab.com/yjgaviriam/merp-web-app.git
