@@ -46,7 +46,7 @@ deploy:
     - chmod 700 ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - ng build --prod
-    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" "mkdir /var/www/test"
+    - ssh -o StrictHostKeyChecking=no -T "ubuntu@$DEPLOY_SERVER" 'bash -s' < ./deploy/restart-server-production.sh
   script:
     - bash .gitlab-deploy.sh   
   environment:     
