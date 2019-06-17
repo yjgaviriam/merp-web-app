@@ -21,5 +21,5 @@ touch ./ubuntu_key.pem
 ls
 echo -e "${SSH_PRIVATE_KEY}" >> ./ubuntu_key.pem
 
-echo "deploying to ${DEPLOY_SERVER} with ${SSH_PRIVATE_KEY}"
+echo "deploying to ${DEPLOY_SERVER}"
 ssh -i "ubuntu_key.pem" ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
