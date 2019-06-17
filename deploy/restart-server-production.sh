@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # any future command that fails will exit the script
+echo "Comenzando desde EC2"
 set -e
 
 # go to folder of repository
