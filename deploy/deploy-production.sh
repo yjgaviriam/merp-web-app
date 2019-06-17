@@ -16,4 +16,4 @@ echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
 
 # Se ingresa al servidor
 echo "deploying to $SERVER"
-ssh -i "$PRIVATE_KEY" ubuntu@ec2-3-13-185-75.us-east-2.compute.amazonaws.com
+ssh -i $PRIVATE_KEY ubuntu@ec2-3-13-185-75.us-east-2.compute.amazonaws.com
