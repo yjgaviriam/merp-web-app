@@ -14,6 +14,6 @@ echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
 # disable the host key checking.
 # sudo ./deploy/disable-host-key-checking.sh
 
-
-echo "deploying to $DEPLOY_SERVER"
-ssh ubuntu@172.31.19.225 'bash -s' < ./deploy/restart-server-production.sh
+# Se ingresa al servidor
+echo "deploying to $SERVER"
+ssh -i "$PRIVATE_KEY" ubuntu@ec2-3-13-185-75.us-east-2.compute.amazonaws.com
