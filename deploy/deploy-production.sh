@@ -19,7 +19,8 @@ ssh-add <(echo "$SSH_PRIVATE_KEY")
 # ** End of alternative approach
 
 # disable the host key checking.
-bash ./deploy/disable-host-key-checking.sh
+# bash ./deploy/disable-host-key-checking.sh
+'[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
 DEPLOY_SERVER=$DEPLOY_SERVER
 
