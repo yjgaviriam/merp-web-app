@@ -6,8 +6,8 @@
  * Constante con el ambiente configurado
  */
 export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:8000/api/'
+  production: true,
+  apiUrl: 'http://3.13.185.75:8000/api/'
 };
 
 /*

@@ -6,14 +6,14 @@ set -e
 # go to folder of repository
 cd /home/ubuntu/merp-web-app/
 
-# pull the repo again
+# pulling the repo again
 git pull https://$USER:$USER_PASSWORD@gitlab.com/yjgaviriam/merp-web-app.git
 
-# install npm packages
+# installing npm packages
 echo "Running npm install"
 npm install
 
-# build application
+# building application
 echo "Build application"
 ng build --prod
 
