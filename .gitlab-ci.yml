@@ -35,6 +35,4 @@ deploy:
   only:
     - master
   script:
-    - eval $(ssh-agent -s)
-    - echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/test
     - bash ./deploy-production.sh
