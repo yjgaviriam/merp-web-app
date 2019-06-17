@@ -20,11 +20,13 @@ ssh-add <(echo "$SSH_PRIVATE_KEY")
 
 # disable the host key checking.
 # bash ./deploy/disable-host-key-checking.sh
+mkdir -p ~/.ssh
+touch ~/.ssh/config
 '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
 DEPLOY_SERVER=$DEPLOY_SERVER
 
-
+echo "a"
 
 echo "deploying to ${DEPLOY_SERVER}"
 ssh ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
