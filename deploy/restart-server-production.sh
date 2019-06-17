@@ -7,7 +7,7 @@ set -e
 cd /home/ubuntu/merp-web-app/
 
 # pulling the repo again
-git pull https://$USER:$USER_PASSWORD@gitlab.com/yjgaviriam/merp-web-app.git
+git pull origin master https://$USER:$USER_PASSWORD@gitlab.com/yjgaviriam/merp-web-app.git
 
 # installing npm packages
 echo "Running npm install"
