@@ -13,27 +13,11 @@ ls
 # ** End of alternative approach
 
 # disable the host key checking.
-./deploy/disable-host-key-checking.sh
+bash ./deploy/disable-host-key-checking.sh
 
 # we have already setup the DEPLOYER_SERVER in our gitlab settings which is a
 # comma seperated values of ip addresses.
 DEPLOY_SERVER=$DEPLOY_SERVER
 
-# lets split this string and convert this into array
-# In UNIX, we can use this commond to do this
-# ${string//substring/replacement}
-# our substring is "," and we replace it with nothing.
-ALL_SERVERS=(${DEPLOY_SERVER//,/ })
-echo "ALL_SERVERS ${ALL_SERVERS}"
-
-# Lets iterate over this array and ssh into each EC2 instance
-# Once inside.
-# 1. Stop the server
-# 2. Take a pull
-# 3. Start the server
-for server in "${ALL_SERVERS[@]}"
-do
-  echo "deploying to ${server}"
-  ssh ubuntu@${server} 'bash -s' < ./deploy/restart-server-production.sh
-done
-
+echo "deploying to ${server}"
+ssh ubuntu@${DEPLOY_SERVER} 'bash -s' < ./deploy/restart-server-production.sh
