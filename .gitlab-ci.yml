@@ -16,7 +16,6 @@ cache:
 # Se realizan las pruebas unitarias
 test:
   script: 
-    - npm install || true
     - 'ng test --watch=false'
   tags:
     - merp-web-runner
@@ -24,7 +23,6 @@ test:
 # Se realizan pruebas e2e
 e2e:
   script:
-    - npm install || true
     - 'ng e2e'
   tags:
     - merp-web-runner
