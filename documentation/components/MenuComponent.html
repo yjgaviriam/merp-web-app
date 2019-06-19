@@ -423,7 +423,7 @@ export class MenuComponent {
       &lt;div class&#x3D;&quot;pull-left info&quot;&gt;
         &lt;p&gt;{{ user.name }} {{ user.lastName }}&lt;/p&gt;
         &lt;!-- Status --&gt;
-        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-circle text-success&quot;&gt;&lt;/i&gt; {{ user.role.name }}&lt;/a&gt;
+        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;em class&#x3D;&quot;fa fa-circle text-success&quot;&gt;&lt;/em&gt; {{ user.role.name }}&lt;/a&gt;
       &lt;/div&gt;
     &lt;/div&gt;
 
@@ -432,28 +432,28 @@ export class MenuComponent {
       &lt;li class&#x3D;&quot;header&quot;&gt;NAVEGACION&lt;/li&gt;
       &lt;!-- &lt;li class&#x3D;&quot;active&quot;&gt; --&gt;
       &lt;li&gt;
-        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-suitcase&quot;&gt;&lt;/i&gt; &lt;span&gt;Proyectos&lt;/span&gt;&lt;/a&gt;
+        &lt;a href&#x3D;&quot;#&quot;&gt;&lt;em class&#x3D;&quot;fa fa-suitcase&quot;&gt;&lt;/em&gt; &lt;span&gt;Proyectos&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li *ngIf&#x3D;&quot;ROLES.ROLE_INSPECTOR &#x3D;&#x3D;&#x3D; user.role.id&quot;&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/circuits&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;fa fa-microchip&quot;&gt;&lt;/i&gt; &lt;span&gt;Circuitos&lt;/span&gt;&lt;/a&gt;
+        &lt;a [routerLink]&#x3D;&quot;[&#x27;/circuits&#x27;]&quot;&gt;&lt;em class&#x3D;&quot;fa fa-microchip&quot;&gt;&lt;/em&gt; &lt;span&gt;Circuitos&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li *ngIf&#x3D;&quot;ROLES.ROLE_INSPECTOR &#x3D;&#x3D;&#x3D; user.role.id&quot;&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/contracts&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;fa fa-book&quot;&gt;&lt;/i&gt; &lt;span&gt;Contratos&lt;/span&gt;&lt;/a&gt;
+        &lt;a [routerLink]&#x3D;&quot;[&#x27;/contracts&#x27;]&quot;&gt;&lt;em class&#x3D;&quot;fa fa-book&quot;&gt;&lt;/em&gt; &lt;span&gt;Contratos&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li *ngIf&#x3D;&quot;ROLES.ROLE_INSPECTOR &#x3D;&#x3D;&#x3D; user.role.id&quot;&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/enterprises&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;fa fa-building&quot;&gt;&lt;/i&gt; &lt;span&gt;Empresas&lt;/span&gt;&lt;/a&gt;
+        &lt;a [routerLink]&#x3D;&quot;[&#x27;/enterprises&#x27;]&quot;&gt;&lt;em class&#x3D;&quot;fa fa-building&quot;&gt;&lt;/em&gt; &lt;span&gt;Empresas&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li *ngIf&#x3D;&quot;ROLES.ROLE_INSPECTOR &#x3D;&#x3D;&#x3D; user.role.id&quot;&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/cities&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;fa fa-bank&quot;&gt;&lt;/i&gt; &lt;span&gt;Municipios&lt;/span&gt;&lt;/a&gt;
+        &lt;a [routerLink]&#x3D;&quot;[&#x27;/cities&#x27;]&quot;&gt;&lt;em class&#x3D;&quot;fa fa-bank&quot;&gt;&lt;/em&gt; &lt;span&gt;Municipios&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li *ngIf&#x3D;&quot;ROLES.ROLE_INSPECTOR &#x3D;&#x3D;&#x3D; user.role.id&quot;&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/substations&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;fa fa-sitemap&quot;&gt;&lt;/i&gt; &lt;span&gt;Subestaciones&lt;/span&gt;&lt;/a&gt;
+        &lt;a [routerLink]&#x3D;&quot;[&#x27;/substations&#x27;]&quot;&gt;&lt;em class&#x3D;&quot;fa fa-sitemap&quot;&gt;&lt;/em&gt; &lt;span&gt;Subestaciones&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li *ngIf&#x3D;&quot;ROLES.ROLE_INSPECTOR &#x3D;&#x3D;&#x3D; user.role.id&quot;&gt;
-        &lt;a [routerLink]&#x3D;&quot;[&#x27;/users&#x27;]&quot;&gt;&lt;i class&#x3D;&quot;fa fa-users&quot;&gt;&lt;/i&gt; &lt;span&gt;Usuarios&lt;/span&gt;&lt;/a&gt;
+        &lt;a [routerLink]&#x3D;&quot;[&#x27;/users&#x27;]&quot;&gt;&lt;em class&#x3D;&quot;fa fa-users&quot;&gt;&lt;/em&gt; &lt;span&gt;Usuarios&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
       &lt;li class&#x3D;&quot;cursor-pointer&quot;&gt;
-        &lt;a (click)&#x3D;&quot;logout()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-user&quot;&gt;&lt;/i&gt; &lt;span&gt;{{ &#x27;LOGOUT&#x27; | translate }}&lt;/span&gt;&lt;/a&gt;
+        &lt;a (click)&#x3D;&quot;logout()&quot;&gt;&lt;em class&#x3D;&quot;fa fa-user&quot;&gt;&lt;/em&gt; &lt;span&gt;{{ &#x27;LOGOUT&#x27; | translate }}&lt;/span&gt;&lt;/a&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
     &lt;!-- /.sidebar-menu --&gt;
@@ -495,7 +495,7 @@ export class MenuComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">  <!-- sidebar: style can be found in sidebar.less -->  <section class="sidebar">    <!-- Sidebar user panel (optional) -->    <div class="user-panel">      <div class="pull-left image">        <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">      </div>      <div class="pull-left info">        <p>{{ user.name }} {{ user.lastName }}</p>        <!-- Status -->        <a href="#"><i class="fa fa-circle text-success"></i> {{ user.role.name }}</a>      </div>    </div>    <!-- Sidebar Menu -->    <ul class="sidebar-menu" data-widget="tree">      <li class="header">NAVEGACION</li>      <!-- <li class="active"> -->      <li>        <a href="#"><i class="fa fa-suitcase"></i> <span>Proyectos</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/circuits\']"><i class="fa fa-microchip"></i> <span>Circuitos</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/contracts\']"><i class="fa fa-book"></i> <span>Contratos</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/enterprises\']"><i class="fa fa-building"></i> <span>Empresas</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/cities\']"><i class="fa fa-bank"></i> <span>Municipios</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/substations\']"><i class="fa fa-sitemap"></i> <span>Subestaciones</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/users\']"><i class="fa fa-users"></i> <span>Usuarios</span></a>      </li>      <li class="cursor-pointer">        <a (click)="logout()"><i class="fa fa-user"></i> <span>{{ \'LOGOUT\' | translate }}</span></a>      </li>    </ul>    <!-- /.sidebar-menu -->  </section>  <!-- /.sidebar --></aside></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- Left side column. contains the logo and sidebar --><aside class="main-sidebar">  <!-- sidebar: style can be found in sidebar.less -->  <section class="sidebar">    <!-- Sidebar user panel (optional) -->    <div class="user-panel">      <div class="pull-left image">        <img src="assets/img/avatar5.png" class="img-circle" alt="User Image">      </div>      <div class="pull-left info">        <p>{{ user.name }} {{ user.lastName }}</p>        <!-- Status -->        <a href="#"><em class="fa fa-circle text-success"></em> {{ user.role.name }}</a>      </div>    </div>    <!-- Sidebar Menu -->    <ul class="sidebar-menu" data-widget="tree">      <li class="header">NAVEGACION</li>      <!-- <li class="active"> -->      <li>        <a href="#"><em class="fa fa-suitcase"></em> <span>Proyectos</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/circuits\']"><em class="fa fa-microchip"></em> <span>Circuitos</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/contracts\']"><em class="fa fa-book"></em> <span>Contratos</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/enterprises\']"><em class="fa fa-building"></em> <span>Empresas</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/cities\']"><em class="fa fa-bank"></em> <span>Municipios</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/substations\']"><em class="fa fa-sitemap"></em> <span>Subestaciones</span></a>      </li>      <li *ngIf="ROLES.ROLE_INSPECTOR === user.role.id">        <a [routerLink]="[\'/users\']"><em class="fa fa-users"></em> <span>Usuarios</span></a>      </li>      <li class="cursor-pointer">        <a (click)="logout()"><em class="fa fa-user"></em> <span>{{ \'LOGOUT\' | translate }}</span></a>      </li>    </ul>    <!-- /.sidebar-menu -->  </section>  <!-- /.sidebar --></aside></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'CircuitsComponent', 'selector': 'app-circuits'},{'name': 'CitiesComponent', 'selector': 'app-cities'},{'name': 'ContractsComponent', 'selector': 'app-contracts'},{'name': 'EnterprisesComponent', 'selector': 'app-enterprises'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RegisterCircuitModalComponent', 'selector': 'app-register-circuit-modal'},{'name': 'RegisterCitiesModalComponent', 'selector': 'app-register-cities-modal'},{'name': 'RegisterContractModalComponent', 'selector': 'app-register-contract-modal'},{'name': 'RegisterEnterpriseModalComponent', 'selector': 'app-register-enterprise-modal'},{'name': 'RegisterProjectModalComponent', 'selector': 'app-register-project-modal'},{'name': 'RegisterSubstationModalComponent', 'selector': 'app-register-substation-modal'},{'name': 'RegisterUserModalComponent', 'selector': 'app-register-user-modal'},{'name': 'SubstationsComponent', 'selector': 'app-substations'},{'name': 'UsersComponent', 'selector': 'app-users'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MenuComponent'};

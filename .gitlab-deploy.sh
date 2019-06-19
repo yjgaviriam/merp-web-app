@@ -6,4 +6,5 @@ USER_GIT=$USER_GIT
 USER_GIT_PASSWORD=$USER_GIT_PASSWORD
 ssh -o StrictHostKeyChecking=no -T "$USER_SERVER@$DEPLOY_SERVER" "cd /home/ubuntu/merp-web-app/ &&
 git pull https://${USER_GIT}:${USER_GIT_PASSWORD}@gitlab.com/yjgaviriam/merp-web-app.git && 
-npm install && ng build --prod && sudo cp -a ./dist/merp-web-app/. /var/www/html/"
+PATH=$PATH:/usr/bin/sonar-scanner-3.3.0.1492-linux/bin && sonar-scanner && npm install && 
+ng build --prod && sudo cp -a ./dist/merp-web-app/. /var/www/html/"
