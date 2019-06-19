@@ -285,7 +285,7 @@ export class BreadcrumbComponent {
 &lt;section class&#x3D;&quot;content-header&quot;&gt;
   &lt;ol class&#x3D;&quot;breadcrumb&quot;&gt;
     &lt;li class&#x3D;&quot;active&quot;&gt;
-      &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;fa fa-dashboard&quot;&gt;&lt;/i&gt;Inicio&lt;/a&gt;
+      &lt;a href&#x3D;&quot;#&quot;&gt;&lt;em class&#x3D;&quot;fa fa-dashboard&quot;&gt;&lt;/em&gt;Inicio&lt;/a&gt;
     &lt;/li&gt;
     &lt;li class&#x3D;&quot;active&quot; *ngIf&#x3D;&quot;isChild&quot;&gt; {{title}}&lt;/li&gt;
   &lt;/ol&gt;
@@ -333,7 +333,7 @@ export class BreadcrumbComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Breadcrumb --><section class="content-header">  <ol class="breadcrumb">    <li class="active">      <a href="#"><i class="fa fa-dashboard"></i>Inicio</a>    </li>    <li class="active" *ngIf="isChild"> {{title}}</li>  </ol></section><!-- /.breadcrumb--></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- Breadcrumb --><section class="content-header">  <ol class="breadcrumb">    <li class="active">      <a href="#"><em class="fa fa-dashboard"></em>Inicio</a>    </li>    <li class="active" *ngIf="isChild"> {{title}}</li>  </ol></section><!-- /.breadcrumb--></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'CircuitsComponent', 'selector': 'app-circuits'},{'name': 'CitiesComponent', 'selector': 'app-cities'},{'name': 'ContractsComponent', 'selector': 'app-contracts'},{'name': 'EnterprisesComponent', 'selector': 'app-enterprises'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ProjectsComponent', 'selector': 'app-projects'},{'name': 'RegisterCircuitModalComponent', 'selector': 'app-register-circuit-modal'},{'name': 'RegisterCitiesModalComponent', 'selector': 'app-register-cities-modal'},{'name': 'RegisterContractModalComponent', 'selector': 'app-register-contract-modal'},{'name': 'RegisterEnterpriseModalComponent', 'selector': 'app-register-enterprise-modal'},{'name': 'RegisterProjectModalComponent', 'selector': 'app-register-project-modal'},{'name': 'RegisterSubstationModalComponent', 'selector': 'app-register-substation-modal'},{'name': 'RegisterUserModalComponent', 'selector': 'app-register-user-modal'},{'name': 'SubstationsComponent', 'selector': 'app-substations'},{'name': 'UsersComponent', 'selector': 'app-users'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'BreadcrumbComponent'};
